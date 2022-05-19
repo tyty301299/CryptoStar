@@ -8,13 +8,21 @@
 import UIKit
 
 class WelcomeViewController: BaseViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var loginEmailButton: UIButton!
+    @IBOutlet weak var loginPhoneButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
-        label.font = .sfProDisplay(font: .semibold, size: 20)
-        label.text = "Ty Nguyen"
-
-        view.addSubview(label)
-        label.center = view.center
+        setupButton(customButton: loginPhoneButton, text: "Login via Phone", background: .black, textColor: .white)
+        setupButton(customButton: loginEmailButton, text: "Login via Email", background: .black, textColor: .white)
+       
+       
+    }
+    
+    @IBAction func loginEmail(_ sender: Any) {
+        
+    }
+    
+    @IBAction func loginPhone(_ sender: Any) {
     }
 }

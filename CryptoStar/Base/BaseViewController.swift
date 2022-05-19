@@ -16,4 +16,12 @@ class BaseViewController: UIViewController {
     deinit {
         print("[HOT] \(self.className) deinit")
     }
+
+    func setupButton(customButton: UIButton, text: String, background: UIColor, textColor: UIColor) {
+        customButton.layer.cornerRadius = customButton.frame.size.height * ( 10 / 48)
+        customButton.setTitle(text, for: .normal)
+        customButton.backgroundColor = background
+        customButton.setTitleColor(textColor, for: .normal)
+        customButton.titleLabel?.font = .sfProDisplay(font: .semibold, size: 16)
+    }
 }
