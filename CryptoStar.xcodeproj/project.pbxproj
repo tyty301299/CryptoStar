@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93E8AA682C888F4199253A9B /* Pods_CryptoStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */; };
+		B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976C2835D5F900F47ADF /* AppDelegate.swift */; };
+		B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976E2835D5F900F47ADF /* SceneDelegate.swift */; };
+		B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */; };
+		B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43E97782835D5FD00F47ADF /* Assets.xcassets */; };
+		B43E977C2835D5FD00F47ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E977A2835D5FD00F47ADF /* LaunchScreen.storyboard */; };
+		B43E97932835E57500F47ADF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97922835E57500F47ADF /* UIColor.swift */; };
+		B43E97952835E59B00F47ADF /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97942835E59B00F47ADF /* Enum.swift */; };
+		B43E979A2835E92300F47ADF /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97992835E92300F47ADF /* NSObject.swift */; };
+		B43E979C2835E96600F47ADF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E979B2835E96600F47ADF /* UIViewController.swift */; };
+		B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E979D2835E9C800F47ADF /* UITableView.swift */; };
+		B43E97A12835EACC00F47ADF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A02835EACC00F47ADF /* BaseViewController.swift */; };
+		B43E97A32835ED5500F47ADF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A22835ED5500F47ADF /* BaseTabBarController.swift */; };
+		B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */; };
+		B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A62835EF4F00F47ADF /* WelcomeViewController.swift */; };
+		B43E97A92835EF4F00F47ADF /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43E97A72835EF4F00F47ADF /* WelcomeViewController.xib */; };
+		B43E97AD2835F6C600F47ADF /* SF-Pro-Display in Resources */ = {isa = PBXBuildFile; fileRef = B43E97AC2835F6C600F47ADF /* SF-Pro-Display */; };
+		B43E97AF2835FA1300F47ADF /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97AE2835FA1300F47ADF /* UIFont.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		016BEDC391A8855D8D36D762 /* Pods-CryptoStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoStar.release.xcconfig"; path = "Target Support Files/Pods-CryptoStar/Pods-CryptoStar.release.xcconfig"; sourceTree = "<group>"; };
+		1466E29506BB2121AE6E4F56 /* Pods-CryptoStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoStar.debug.xcconfig"; path = "Target Support Files/Pods-CryptoStar/Pods-CryptoStar.debug.xcconfig"; sourceTree = "<group>"; };
+		3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43E97692835D5F900F47ADF /* CryptoStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43E976C2835D5F900F47ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B43E976E2835D5F900F47ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B43E97762835D5F900F47ADF /* CryptoStar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoStar.xcdatamodel; sourceTree = "<group>"; };
+		B43E97782835D5FD00F47ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B43E977B2835D5FD00F47ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B43E977D2835D5FD00F47ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43E97922835E57500F47ADF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B43E97942835E59B00F47ADF /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		B43E97992835E92300F47ADF /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		B43E979B2835E96600F47ADF /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B43E979D2835E9C800F47ADF /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		B43E97A02835EACC00F47ADF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B43E97A22835ED5500F47ADF /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		B43E97A62835EF4F00F47ADF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B43E97A72835EF4F00F47ADF /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		B43E97AC2835F6C600F47ADF /* SF-Pro-Display */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SF-Pro-Display"; sourceTree = "<group>"; };
+		B43E97AE2835FA1300F47ADF /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B43E97662835D5F900F47ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E8AA682C888F4199253A9B /* Pods_CryptoStar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B43E97602835D5F900F47ADF = {
+			isa = PBXGroup;
+			children = (
+				B43E976B2835D5F900F47ADF /* CryptoStar */,
+				B43E97962835E88400F47ADF /* Products */,
+				B43E97972835E89100F47ADF /* Pods */,
+				B43E97982835E8AB00F47ADF /* Frameworks */,
+				B43E976A2835D5F900F47ADF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B43E976A2835D5F900F47ADF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97692835D5F900F47ADF /* CryptoStar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B43E976B2835D5F900F47ADF /* CryptoStar */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97832835D73100F47ADF /* AppDelegate */,
+				B43E97842835D74F00F47ADF /* Base */,
+				B43E97852835D75800F47ADF /* Controller */,
+				B43E97862835D76900F47ADF /* Extensions */,
+				B43E97872835D77E00F47ADF /* Helper */,
+				B43E97882835D78C00F47ADF /* Libraries */,
+				B43E97892835D7B900F47ADF /* Model */,
+				B43E978A2835D7C600F47ADF /* Resources */,
+				B43E978B2835D7D700F47ADF /* Services */,
+				B43E978C2835D7FD00F47ADF /* Targets */,
+				B43E978D2835D8A200F47ADF /* Views */,
+			);
+			path = CryptoStar;
+			sourceTree = "<group>";
+		};
+		B43E97832835D73100F47ADF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B43E976C2835D5F900F47ADF /* AppDelegate.swift */,
+				B43E976E2835D5F900F47ADF /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B43E97842835D74F00F47ADF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97A02835EACC00F47ADF /* BaseViewController.swift */,
+				B43E97A22835ED5500F47ADF /* BaseTabBarController.swift */,
+				B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B43E97852835D75800F47ADF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97AA2835EF5600F47ADF /* Welcome */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B43E97862835D76900F47ADF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97922835E57500F47ADF /* UIColor.swift */,
+				B43E97992835E92300F47ADF /* NSObject.swift */,
+				B43E979B2835E96600F47ADF /* UIViewController.swift */,
+				B43E979D2835E9C800F47ADF /* UITableView.swift */,
+				B43E97AE2835FA1300F47ADF /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B43E97872835D77E00F47ADF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B43E978F2835D9AA00F47ADF /* Enum */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B43E97882835D78C00F47ADF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		B43E97892835D7B900F47ADF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B43E978A2835D7C600F47ADF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97AB2835F6B100F47ADF /* Font */,
+				B43E97782835D5FD00F47ADF /* Assets.xcassets */,
+				B43E977A2835D5FD00F47ADF /* LaunchScreen.storyboard */,
+				B43E977D2835D5FD00F47ADF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B43E978B2835D7D700F47ADF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B43E979F2835EAA000F47ADF /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B43E978C2835D7FD00F47ADF /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		B43E978D2835D8A200F47ADF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B43E978F2835D9AA00F47ADF /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97942835E59B00F47ADF /* Enum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		B43E97962835E88400F47ADF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		B43E97972835E89100F47ADF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1466E29506BB2121AE6E4F56 /* Pods-CryptoStar.debug.xcconfig */,
+				016BEDC391A8855D8D36D762 /* Pods-CryptoStar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B43E97982835E8AB00F47ADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B43E979F2835EAA000F47ADF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B43E97AA2835EF5600F47ADF /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97A62835EF4F00F47ADF /* WelcomeViewController.swift */,
+				B43E97A72835EF4F00F47ADF /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		B43E97AB2835F6B100F47ADF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B43E97AC2835F6C600F47ADF /* SF-Pro-Display */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B43E97682835D5F900F47ADF /* CryptoStar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43E97802835D5FD00F47ADF /* Build configuration list for PBXNativeTarget "CryptoStar" */;
+			buildPhases = (
+				8FF2EDFA390ED9864AE231EF /* [CP] Check Pods Manifest.lock */,
+				B43E97652835D5F900F47ADF /* Sources */,
+				B43E97662835D5F900F47ADF /* Frameworks */,
+				B43E97672835D5F900F47ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoStar;
+			productName = CryptoStar;
+			productReference = B43E97692835D5F900F47ADF /* CryptoStar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B43E97612835D5F900F47ADF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B43E97682835D5F900F47ADF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B43E97642835D5F900F47ADF /* Build configuration list for PBXProject "CryptoStar" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B43E97602835D5F900F47ADF;
+			productRefGroup = B43E976A2835D5F900F47ADF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B43E97682835D5F900F47ADF /* CryptoStar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B43E97672835D5F900F47ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43E97AD2835F6C600F47ADF /* SF-Pro-Display in Resources */,
+				B43E97A92835EF4F00F47ADF /* WelcomeViewController.xib in Resources */,
+				B43E977C2835D5FD00F47ADF /* LaunchScreen.storyboard in Resources */,
+				B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FF2EDFA390ED9864AE231EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoStar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B43E97652835D5F900F47ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43E97932835E57500F47ADF /* UIColor.swift in Sources */,
+				B43E97A12835EACC00F47ADF /* BaseViewController.swift in Sources */,
+				B43E979C2835E96600F47ADF /* UIViewController.swift in Sources */,
+				B43E97952835E59B00F47ADF /* Enum.swift in Sources */,
+				B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */,
+				B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */,
+				B43E97A32835ED5500F47ADF /* BaseTabBarController.swift in Sources */,
+				B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */,
+				B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */,
+				B43E97AF2835FA1300F47ADF /* UIFont.swift in Sources */,
+				B43E979A2835E92300F47ADF /* NSObject.swift in Sources */,
+				B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */,
+				B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B43E977A2835D5FD00F47ADF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B43E977B2835D5FD00F47ADF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B43E977E2835D5FD00F47ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B43E977F2835D5FD00F47ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B43E97812835D5FD00F47ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1466E29506BB2121AE6E4F56 /* Pods-CryptoStar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B7C4QH7DZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoStar/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ty-nguyen.CryptoStar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B43E97822835D5FD00F47ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 016BEDC391A8855D8D36D762 /* Pods-CryptoStar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B7C4QH7DZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoStar/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ty-nguyen.CryptoStar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B43E97642835D5F900F47ADF /* Build configuration list for PBXProject "CryptoStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43E977E2835D5FD00F47ADF /* Debug */,
+				B43E977F2835D5FD00F47ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43E97802835D5FD00F47ADF /* Build configuration list for PBXNativeTarget "CryptoStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B43E97812835D5FD00F47ADF /* Debug */,
+				B43E97822835D5FD00F47ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B43E97762835D5F900F47ADF /* CryptoStar.xcdatamodel */,
+			);
+			currentVersion = B43E97762835D5F900F47ADF /* CryptoStar.xcdatamodel */;
+			path = CryptoStar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B43E97612835D5F900F47ADF /* Project object */;
+}
