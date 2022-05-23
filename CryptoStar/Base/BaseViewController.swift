@@ -17,11 +17,45 @@ class BaseViewController: UIViewController {
         print("[HOT] \(self.className) deinit")
     }
 
-    func setupButton(customButton: UIButton, text: String, background: UIColor, textColor: UIColor) {
-        customButton.layer.cornerRadius = customButton.frame.size.height * ( 10 / 48)
-        customButton.setTitle(text, for: .normal)
-        customButton.backgroundColor = background
-        customButton.setTitleColor(textColor, for: .normal)
-        customButton.titleLabel?.font = .sfProDisplay(font: .semibold, size: 16)
+    func setupButton(customButton: UIButton, text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
+        customButton.layer.cornerRadius = customButton.frame.size.height * (10 / 48)
+        customButton.setFontButton(background: background, title: text, textColor: textColor)
     }
+
+    func setTitle(text: String) {
+        title = text
+    }
+
+    func loadFont() {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.sfProDisplay(font: .medium, size: 20.scaleW),
+        ]
+
+        navigationController?.navigationBar.titleTextAttributes = attrs
+    }
+
+    func backViewController() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "backImage"),
+            style: .done,
+            target: self,
+            action: #selector(backButtonPressed)
+        )
+    }
+
+    @objc func backButtonPressed() {
+        print("back")
+
+        popViewController()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+}
+
+extension UITextField: UITextFieldDelegate {
 }

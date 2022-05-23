@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+let raitoX = ScreenSize.screenSizeX
 struct ScreenSize {
-    static let screenSizeX = CGSize(width: 375, height: 812)
+    static let screenSizeX = CGSize(
+        width: UIScreen.main.bounds.width / 375,
+        height: UIScreen.main.bounds.height / 812)
 }

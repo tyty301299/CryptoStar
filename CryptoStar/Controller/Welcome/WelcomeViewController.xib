@@ -21,7 +21,9 @@
             <connections>
                 <outlet property="loginEmailButton" destination="Rnm-fd-XTg" id="pMg-BU-UgB"/>
                 <outlet property="loginPhoneButton" destination="Eg5-jd-yWo" id="WEO-DA-Pxl"/>
+                <outlet property="spaceTopLoginPhoneButton" destination="PsH-4l-TVZ" id="FOr-cl-sAI"/>
                 <outlet property="titleLabel" destination="Un5-sM-uQU" id="w54-yo-Ac0"/>
+                <outlet property="topLayoutLoginPhoneButton" destination="2DE-LM-shn" id="X5C-AX-twz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,10 +33,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cryptostar" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-B6-tjj">
-                    <rect key="frame" x="0.0" y="253.5" width="414" height="399"/>
+                    <rect key="frame" x="-50.5" y="253.5" width="515" height="399"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store. Watch &amp; Trade Crypto Currencies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-CN-FtL">
-                    <rect key="frame" x="58.5" y="671.5" width="297" height="21"/>
+                    <rect key="frame" x="58.5" y="734.5" width="297" height="21"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                     <color key="textColor" name="color_6E7F8D"/>
                     <nil key="highlightedColor"/>
@@ -63,7 +65,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eg5-jd-yWo">
-                    <rect key="frame" x="22" y="735.5" width="370" height="48.5"/>
+                    <rect key="frame" x="22" y="769.5" width="370" height="48"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -71,7 +73,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rnm-fd-XTg">
-                    <rect key="frame" x="22" y="794" width="370" height="48"/>
+                    <rect key="frame" x="22" y="827.5" width="370" height="48.5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -82,25 +84,24 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Eg5-jd-yWo" firstAttribute="top" secondItem="2Zs-CN-FtL" secondAttribute="bottom" constant="14" id="2DE-LM-shn"/>
                 <constraint firstItem="2Zs-CN-FtL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4Yy-6s-0RA"/>
-                <constraint firstItem="2Zs-CN-FtL" firstAttribute="bottom" secondItem="WFb-B6-tjj" secondAttribute="bottom" constant="40" id="4rZ-03-Z7a"/>
                 <constraint firstItem="Eg5-jd-yWo" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="335/375" id="Gtm-Q7-Xyl"/>
                 <constraint firstItem="Rnm-fd-XTg" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="335/375" id="OmE-ac-rhH"/>
                 <constraint firstItem="Rnm-fd-XTg" firstAttribute="top" secondItem="Eg5-jd-yWo" secondAttribute="bottom" constant="10" id="PsH-4l-TVZ"/>
                 <constraint firstItem="nL7-EB-Au9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="RHG-cU-FF2"/>
+                <constraint firstItem="WFb-B6-tjj" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="466.7/375" id="RLN-cT-cCh"/>
                 <constraint firstItem="nL7-EB-Au9" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="185/375" id="WgK-5F-PDz"/>
-                <constraint firstItem="Rnm-fd-XTg" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="48/815" id="dOy-ho-yty"/>
+                <constraint firstItem="Rnm-fd-XTg" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="48/812" id="dOy-ho-yty"/>
                 <constraint firstItem="WFb-B6-tjj" firstAttribute="firstBaseline" secondItem="nL7-EB-Au9" secondAttribute="baseline" multiplier="120.79/78.79" constant="8" symbolType="layoutAnchor" id="dad-vn-tPP"/>
-                <constraint firstItem="WFb-B6-tjj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fhy-Zk-huh"/>
-                <constraint firstItem="Eg5-jd-yWo" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="48/815" id="fk5-Et-VTC"/>
+                <constraint firstItem="Eg5-jd-yWo" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="48/812" id="fk5-Et-VTC"/>
                 <constraint firstItem="Eg5-jd-yWo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fmR-dJ-u2k"/>
                 <constraint firstItem="WFb-B6-tjj" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="fyx-9X-sua"/>
                 <constraint firstItem="nL7-EB-Au9" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="42/812" id="g53-Eq-INW"/>
                 <constraint firstItem="WFb-B6-tjj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="orf-BM-cZy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WFb-B6-tjj" secondAttribute="trailing" id="qbd-Y1-qae"/>
                 <constraint firstItem="WFb-B6-tjj" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="362/812" id="qx2-4b-GcP"/>
                 <constraint firstItem="Rnm-fd-XTg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xCR-ed-MPC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Rnm-fd-XTg" secondAttribute="bottom" constant="20" id="xuz-D5-4dq"/>
+                <constraint firstAttribute="bottom" secondItem="Rnm-fd-XTg" secondAttribute="bottom" constant="20" id="xuz-D5-4dq"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
         </view>

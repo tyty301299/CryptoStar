@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93E8AA682C888F4199253A9B /* Pods_CryptoStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */; };
+		B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE5E283B366C00CB5EB6 /* UIButton.swift */; };
 		B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976C2835D5F900F47ADF /* AppDelegate.swift */; };
 		B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976E2835D5F900F47ADF /* SceneDelegate.swift */; };
 		B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */; };
@@ -31,12 +32,29 @@
 		B4ADA01328364258007D320E /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01228364258007D320E /* WelcomeViewController.xib */; };
 		B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01628364CA0007D320E /* DataInputView.xib */; };
 		B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA01B28364E18007D320E /* DataInputView.swift */; };
+		B4ADA02028367234007D320E /* LoginPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA01E28367234007D320E /* LoginPhoneViewController.swift */; };
+		B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01F28367234007D320E /* LoginPhoneViewController.xib */; };
+		B4ADA02328376ABA007D320E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02228376ABA007D320E /* UITextField.swift */; };
+		B4ADA02528378FE9007D320E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02428378FE9007D320E /* Int.swift */; };
+		B4ADA027283793CA007D320E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA026283793CA007D320E /* Double.swift */; };
+		B4ADA02A2837951E007D320E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA0292837951E007D320E /* CGFloat.swift */; };
+		B4ADA02C28379579007D320E /* CustomNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA02B28379579007D320E /* CustomNavigationBarView.xib */; };
+		B4ADA02E28379593007D320E /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02D28379593007D320E /* CustomNavigationBarView.swift */; };
+		B4ADA030283A414F007D320E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02F283A414F007D320E /* UILabel.swift */; };
+		B4ADA034283A42CA007D320E /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA032283A42CA007D320E /* VerifyPhoneNumberViewController.swift */; };
+		B4ADA035283A42CA007D320E /* VerifyPhoneNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA033283A42CA007D320E /* VerifyPhoneNumberViewController.xib */; };
+		B4BB0071283A5D4F0013E445 /* OTPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BB0070283A5D4F0013E445 /* OTPView.xib */; };
+		B4BB0073283A5D650013E445 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB0072283A5D650013E445 /* OTPView.swift */; };
+		B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB0076283A5DF90013E445 /* OTPTextField.swift */; };
+		B4BB007A283A71D00013E445 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB0078283A71D00013E445 /* LoginEmailViewController.swift */; };
+		B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BB0079283A71D00013E445 /* LoginEmailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		016BEDC391A8855D8D36D762 /* Pods-CryptoStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoStar.release.xcconfig"; path = "Target Support Files/Pods-CryptoStar/Pods-CryptoStar.release.xcconfig"; sourceTree = "<group>"; };
 		1466E29506BB2121AE6E4F56 /* Pods-CryptoStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoStar.debug.xcconfig"; path = "Target Support Files/Pods-CryptoStar/Pods-CryptoStar.debug.xcconfig"; sourceTree = "<group>"; };
 		3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431DE5E283B366C00CB5EB6 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		B43E97692835D5F900F47ADF /* CryptoStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43E976C2835D5F900F47ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43E976E2835D5F900F47ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +80,22 @@
 		B4ADA01228364258007D320E /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		B4ADA01628364CA0007D320E /* DataInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataInputView.xib; sourceTree = "<group>"; };
 		B4ADA01B28364E18007D320E /* DataInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputView.swift; sourceTree = "<group>"; };
+		B4ADA01E28367234007D320E /* LoginPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneViewController.swift; sourceTree = "<group>"; };
+		B4ADA01F28367234007D320E /* LoginPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPhoneViewController.xib; sourceTree = "<group>"; };
+		B4ADA02228376ABA007D320E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		B4ADA02428378FE9007D320E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		B4ADA026283793CA007D320E /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		B4ADA0292837951E007D320E /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		B4ADA02B28379579007D320E /* CustomNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBarView.xib; sourceTree = "<group>"; };
+		B4ADA02D28379593007D320E /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
+		B4ADA02F283A414F007D320E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		B4ADA032283A42CA007D320E /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		B4ADA033283A42CA007D320E /* VerifyPhoneNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyPhoneNumberViewController.xib; sourceTree = "<group>"; };
+		B4BB0070283A5D4F0013E445 /* OTPView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPView.xib; sourceTree = "<group>"; };
+		B4BB0072283A5D650013E445 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		B4BB0076283A5DF90013E445 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		B4BB0078283A71D00013E445 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
+		B4BB0079283A71D00013E445 /* LoginEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginEmailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +169,10 @@
 		B43E97852835D75800F47ADF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4BB0075283A5DD70013E445 /* OTPTextField */,
+				B4BB006E283A56C00013E445 /* LoginEmail */,
+				B4ADA031283A428C007D320E /* VerifyPhoneNumber */,
+				B4ADA01D283671FD007D320E /* LoginPhone */,
 				B43E97AA2835EF5600F47ADF /* Welcome */,
 			);
 			path = Controller;
@@ -148,6 +186,12 @@
 				B43E979B2835E96600F47ADF /* UIViewController.swift */,
 				B43E979D2835E9C800F47ADF /* UITableView.swift */,
 				B43E97AE2835FA1300F47ADF /* UIFont.swift */,
+				B4ADA02228376ABA007D320E /* UITextField.swift */,
+				B4ADA02428378FE9007D320E /* Int.swift */,
+				B4ADA026283793CA007D320E /* Double.swift */,
+				B4ADA0292837951E007D320E /* CGFloat.swift */,
+				B4ADA02F283A414F007D320E /* UILabel.swift */,
+				B431DE5E283B366C00CB5EB6 /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +248,8 @@
 		B43E978D2835D8A200F47ADF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4BB006F283A5D330013E445 /* OTPView */,
+				B4ADA02828379469007D320E /* CustomNavigationBarView */,
 				B4ADA01828364DC2007D320E /* DataInput */,
 			);
 			path = Views;
@@ -288,10 +334,63 @@
 		B4ADA01828364DC2007D320E /* DataInput */ = {
 			isa = PBXGroup;
 			children = (
-				B4ADA01628364CA0007D320E /* DataInputView.xib */,
 				B4ADA01B28364E18007D320E /* DataInputView.swift */,
+				B4ADA01628364CA0007D320E /* DataInputView.xib */,
 			);
 			path = DataInput;
+			sourceTree = "<group>";
+		};
+		B4ADA01D283671FD007D320E /* LoginPhone */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADA01E28367234007D320E /* LoginPhoneViewController.swift */,
+				B4ADA01F28367234007D320E /* LoginPhoneViewController.xib */,
+			);
+			path = LoginPhone;
+			sourceTree = "<group>";
+		};
+		B4ADA02828379469007D320E /* CustomNavigationBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADA02D28379593007D320E /* CustomNavigationBarView.swift */,
+				B4ADA02B28379579007D320E /* CustomNavigationBarView.xib */,
+			);
+			path = CustomNavigationBarView;
+			sourceTree = "<group>";
+		};
+		B4ADA031283A428C007D320E /* VerifyPhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADA032283A42CA007D320E /* VerifyPhoneNumberViewController.swift */,
+				B4ADA033283A42CA007D320E /* VerifyPhoneNumberViewController.xib */,
+			);
+			path = VerifyPhoneNumber;
+			sourceTree = "<group>";
+		};
+		B4BB006E283A56C00013E445 /* LoginEmail */ = {
+			isa = PBXGroup;
+			children = (
+				B4BB0078283A71D00013E445 /* LoginEmailViewController.swift */,
+				B4BB0079283A71D00013E445 /* LoginEmailViewController.xib */,
+			);
+			path = LoginEmail;
+			sourceTree = "<group>";
+		};
+		B4BB006F283A5D330013E445 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				B4BB0072283A5D650013E445 /* OTPView.swift */,
+				B4BB0070283A5D4F0013E445 /* OTPView.xib */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		B4BB0075283A5DD70013E445 /* OTPTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B4BB0076283A5DF90013E445 /* OTPTextField.swift */,
+			);
+			path = OTPTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,13 +452,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ADA035283A42CA007D320E /* VerifyPhoneNumberViewController.xib in Resources */,
+				B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */,
 				B49C211828362E1300D4FCEE /* SF-Pro-Display-Medium.otf in Resources */,
 				B4ADA01328364258007D320E /* WelcomeViewController.xib in Resources */,
 				B49C211728362E1300D4FCEE /* SF-Pro-Display-Bold.otf in Resources */,
 				B49C211928362E1300D4FCEE /* SF-Pro-Display-Semibold.otf in Resources */,
+				B4BB0071283A5D4F0013E445 /* OTPView.xib in Resources */,
+				B4ADA02C28379579007D320E /* CustomNavigationBarView.xib in Resources */,
 				B43E977C2835D5FD00F47ADF /* LaunchScreen.storyboard in Resources */,
 				B49C211628362E1300D4FCEE /* SF-Pro-Display-Regular.otf in Resources */,
 				B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */,
+				B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */,
 				B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,21 +500,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ADA02A2837951E007D320E /* CGFloat.swift in Sources */,
 				B43E97932835E57500F47ADF /* UIColor.swift in Sources */,
 				B43E97A12835EACC00F47ADF /* BaseViewController.swift in Sources */,
+				B4BB007A283A71D00013E445 /* LoginEmailViewController.swift in Sources */,
 				B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */,
 				B43E979C2835E96600F47ADF /* UIViewController.swift in Sources */,
 				B43E97952835E59B00F47ADF /* Enum.swift in Sources */,
 				B49C211028361B0300D4FCEE /* ScreenSize.swift in Sources */,
 				B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */,
+				B4ADA02E28379593007D320E /* CustomNavigationBarView.swift in Sources */,
 				B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */,
 				B43E97A32835ED5500F47ADF /* BaseTabBarController.swift in Sources */,
 				B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */,
 				B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */,
+				B4ADA02028367234007D320E /* LoginPhoneViewController.swift in Sources */,
+				B4BB0073283A5D650013E445 /* OTPView.swift in Sources */,
+				B4ADA030283A414F007D320E /* UILabel.swift in Sources */,
 				B43E97AF2835FA1300F47ADF /* UIFont.swift in Sources */,
+				B4ADA027283793CA007D320E /* Double.swift in Sources */,
+				B4ADA034283A42CA007D320E /* VerifyPhoneNumberViewController.swift in Sources */,
 				B43E979A2835E92300F47ADF /* NSObject.swift in Sources */,
 				B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */,
+				B4ADA02528378FE9007D320E /* Int.swift in Sources */,
+				B4ADA02328376ABA007D320E /* UITextField.swift in Sources */,
 				B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */,
+				B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */,
+				B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +677,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +708,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
