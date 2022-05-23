@@ -12,7 +12,7 @@ class LoginPhoneViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet var topLayoutDataInputView: NSLayoutConstraint!
     @IBOutlet var spaceBottomButton: NSLayoutConstraint!
     @IBOutlet var sendButton: UIButton!
-    @IBOutlet var phonenNumberView: DataInputView!
+    @IBOutlet var phoneNumberView: DataInputView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,35 +20,26 @@ class LoginPhoneViewController: BaseViewController, UITextFieldDelegate {
         navigationBarView.setupStyleLabel()
         navigationBarView.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchDown)
         navigationBarView.titleLabel.setTitle(title: TitleNavigationBar.loginPhone)
-        phonenNumberView.dataInputTextField.delegate = self
-        phonenNumberView.setUpTextLabel(text: .phoneNumber)
-        phonenNumberView.setUpTextField()
+
+        topLayoutDataInputView.constant = 237.scaleH
+        spaceBottomButton.constant = 20.scaleH
+
+        phoneNumberView.dataInputTextField.delegate = self
+        phoneNumberView.setUpTextLabel(text: .phoneNumber)
+
+        phoneNumberView.setUpTextField(keyboardType: .numberPad)
         setupButton(customButton: sendButton, text: .otp, background: .black, textColor: .white)
 
         sendButton.addTarget(self, action: #selector(onClickSendButton), for: .touchDown)
-
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        topLayoutDataInputView.constant = 237.scaleH
-        spaceBottomButton.constant = 20.scaleH
     }
 
     @objc func onClickSendButton() {
         pushViewController(VerifyPhoneNumberViewController())
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-
-//        spaceBottomButton.constant = 0 + keyboardSize.height
-    }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-//        spaceBottomButton.constant = 0
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        phoneNumberView.layoutIfNeeded()
+        phoneNumberView.createLayerLineTextField()
     }
 }

@@ -19,7 +19,8 @@ class BaseViewController: UIViewController {
 
     func setupButton(customButton: UIButton, text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
         customButton.layer.cornerRadius = customButton.frame.size.height * (10 / 48)
-        customButton.setFontButton(background: background, title: text, textColor: textColor)
+        customButton.backgroundColor = background
+        customButton.setFontButton(title: text, textColor: textColor)
     }
 
     func setTitle(text: String) {

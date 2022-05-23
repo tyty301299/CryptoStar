@@ -29,7 +29,7 @@ protocol TitleProtocol {
 }
 
 enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
-    case createAcc = "Create a New Account"
+    case createAccount = "Create a New Account"
     case loginPhone = "Login via Phone"
     case loginEmail = "Login via Email"
     case verifyPhone = "Verify phone number"
@@ -47,13 +47,13 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
 enum TitleLabel: String, CaseIterable, TitleProtocol {
     case name = "YOUR NAME"
     case email = "EMAIL ID"
-    case pass = "PASS WORD"
+    case pass = "PASSWORD"
     case confirmPass = "CONFIRM PASSWORD"
     case phoneNumber = "Phone Number"
     case resend = "Resend"
     case login = "Login Now"
     case signup = "Signup Now"
-    case accountNot = "Don't have an account?"
+    case dontHaveAnAccount = "Don't have an account?"
 
     func getTitle() -> String {
         return rawValue

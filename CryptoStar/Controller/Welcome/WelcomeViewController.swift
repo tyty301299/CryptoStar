@@ -8,10 +8,14 @@
 import UIKit
 
 class WelcomeViewController: BaseViewController {
+    @IBOutlet weak var storeWatchLabel: UILabel!
+    @IBOutlet weak var spaceTitleLabelAndLogoImage: NSLayoutConstraint!
     
-    @IBOutlet weak var spaceTopLoginPhoneButton: NSLayoutConstraint!
+    @IBOutlet weak var robotImageView: UIImageView!
+    @IBOutlet var logoView: UIView!
+    @IBOutlet var spaceTopLoginPhoneButton: NSLayoutConstraint!
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet weak var topLayoutLoginPhoneButton: NSLayoutConstraint!
+    @IBOutlet var topLayoutLoginPhoneButton: NSLayoutConstraint!
     @IBOutlet var loginEmailButton: UIButton!
     @IBOutlet var loginPhoneButton: UIButton!
     override func viewDidLoad() {
@@ -19,7 +23,17 @@ class WelcomeViewController: BaseViewController {
         setupButton(customButton: loginPhoneButton, text: .loginPhone, background: .black, textColor: .white)
         setupButton(customButton: loginEmailButton, text: .loginEmail, background: .black, textColor: .white)
     }
+
     override func viewWillAppear(_ animated: Bool) {
+        logoView.frame.size.width = 185.scaleW
+        logoView.frame.size.height = 42.scaleH
+        print(logoView.frame.size)
+        titleLabel.font = .sfProDisplay(font: .bold, size: 26.scaleW)
+        storeWatchLabel.font = .sfProDisplay(font: .regular, size: 18.scaleW)
+        spaceTitleLabelAndLogoImage.constant = 15.scaleW
+        robotImageView.frame.size.width = 466.7.scaleW
+        robotImageView.frame.size.height = 362.scaleH
+        print("Robot size :",robotImageView.frame.size)
         spaceTopLoginPhoneButton.constant = 18.scaleH
         topLayoutLoginPhoneButton.constant = 14.scaleH
     }

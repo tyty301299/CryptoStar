@@ -6,9 +6,13 @@
 //
 
 import UIKit
-let raitoX = ScreenSize.screenSizeX
+let ratioIphoneX = ScreenSize.screenSizeIphoneX
+let ratioIpadPro = ScreenSize.screenSizeIpad
 struct ScreenSize {
-    static let screenSizeX = CGSize(
+    static let screenSizeIphoneX = CGSize(
         width: UIScreen.main.bounds.width / 375,
         height: UIScreen.main.bounds.height / 812)
+    static let screenSizeIpad = CGSize(
+        width: 1.3,
+        height: 1.3)
 }
