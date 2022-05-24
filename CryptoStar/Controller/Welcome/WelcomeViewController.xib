@@ -23,11 +23,11 @@
                 <outlet property="loginPhoneButton" destination="Eg5-jd-yWo" id="WEO-DA-Pxl"/>
                 <outlet property="logoView" destination="nL7-EB-Au9" id="ZLy-n7-tsS"/>
                 <outlet property="robotImageView" destination="WFb-B6-tjj" id="Dz6-G7-oP0"/>
-                <outlet property="spaceTitleLabelAndLogoImage" destination="Xib-DN-jJE" id="abC-e1-AX8"/>
-                <outlet property="spaceTopLoginPhoneButton" destination="PsH-4l-TVZ" id="FOr-cl-sAI"/>
+                <outlet property="spaceTitleLabelAndLogoImageLC" destination="Xib-DN-jJE" id="abC-e1-AX8"/>
+                <outlet property="spaceTopLoginPhoneButtonLC" destination="PsH-4l-TVZ" id="FOr-cl-sAI"/>
                 <outlet property="storeWatchLabel" destination="2Zs-CN-FtL" id="FCQ-l3-0c4"/>
                 <outlet property="titleLabel" destination="Un5-sM-uQU" id="w54-yo-Ac0"/>
-                <outlet property="topLayoutLoginPhoneButton" destination="2DE-LM-shn" id="X5C-AX-twz"/>
+                <outlet property="topLoginPhoneButtonLC" destination="2DE-LM-shn" id="X5C-AX-twz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

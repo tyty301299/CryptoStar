@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,33 +21,33 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="348"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFO-LR-n3i">
-                    <rect key="frame" x="0.0" y="44" width="23" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFO-LR-n3i">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="12"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-VK-y45">
-                    <rect key="frame" x="0.0" y="116" width="414" height="232"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-VK-y45">
+                    <rect key="frame" x="0.0" y="14.5" width="414" height="28.5"/>
                     <color key="textColor" name="color_141A22"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="rjF-oN-ufj"/>
             <constraints>
-                <constraint firstItem="kE6-VK-y45" firstAttribute="leading" secondItem="rjF-oN-ufj" secondAttribute="leading" id="8vq-t4-EvT"/>
+                <constraint firstAttribute="trailing" secondItem="WFO-LR-n3i" secondAttribute="trailing" id="7w0-ak-bDt"/>
+                <constraint firstItem="kE6-VK-y45" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8vq-t4-EvT"/>
                 <constraint firstItem="kE6-VK-y45" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="2/3" id="KAe-0c-r19"/>
-                <constraint firstItem="rjF-oN-ufj" firstAttribute="trailing" secondItem="kE6-VK-y45" secondAttribute="trailing" id="b59-Dv-elc"/>
-                <constraint firstItem="WFO-LR-n3i" firstAttribute="top" secondItem="rjF-oN-ufj" secondAttribute="top" id="bbZ-8U-aZN"/>
-                <constraint firstItem="rjF-oN-ufj" firstAttribute="bottom" secondItem="kE6-VK-y45" secondAttribute="bottom" id="ggL-Yp-G5N"/>
-                <constraint firstItem="WFO-LR-n3i" firstAttribute="leading" secondItem="rjF-oN-ufj" secondAttribute="leading" id="kjS-8P-dyt"/>
+                <constraint firstAttribute="trailing" secondItem="kE6-VK-y45" secondAttribute="trailing" id="b59-Dv-elc"/>
+                <constraint firstItem="WFO-LR-n3i" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bbZ-8U-aZN"/>
+                <constraint firstAttribute="bottom" secondItem="kE6-VK-y45" secondAttribute="bottom" id="ggL-Yp-G5N"/>
+                <constraint firstItem="WFO-LR-n3i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kjS-8P-dyt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="34.782608695652179" y="-99.776785714285708"/>
+            <point key="canvasLocation" x="35" y="-211"/>
         </view>
     </objects>
     <resources>

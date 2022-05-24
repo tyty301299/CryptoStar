@@ -13,15 +13,15 @@ class BaseNavigationController: UINavigationController {
         navigationBar.isTranslucent = true
         navigationBar.isHidden = true
         navigationBar.tintColor = .black
-        setUpBackButton()
+        self.loadFont()
     }
 
-    func setUpBackButton() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "backImage"),
-            style: .done,
-            target: self,
-            action: nil
-        )
+    func loadFont() {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.sfProDisplay(font: .medium, size: 20.scaleW),
+        ]
+
+        navigationController?.navigationBar.titleTextAttributes = attrs
     }
 }

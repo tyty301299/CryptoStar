@@ -13,8 +13,8 @@
                 <outlet property="navigationBarView" destination="2gn-9M-MtO" id="bQ7-bZ-kPr"/>
                 <outlet property="phoneNumberView" destination="dCr-0R-Y1L" id="BnX-z3-TBw"/>
                 <outlet property="sendButton" destination="kDc-yW-XxV" id="SUp-SI-nSq"/>
-                <outlet property="spaceBottomButton" destination="Rke-Mo-sqJ" id="zGm-Lg-W74"/>
-                <outlet property="topLayoutDataInputView" destination="ziw-3h-nQa" id="Xbk-1L-j3j"/>
+                <outlet property="spaceBottomButtonLC" destination="Rke-Mo-sqJ" id="zGm-Lg-W74"/>
+                <outlet property="topDataInputViewLC" destination="ziw-3h-nQa" id="Xbk-1L-j3j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

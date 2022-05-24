@@ -18,26 +18,12 @@ class BaseViewController: UIViewController {
     }
 
     func setupButton(customButton: UIButton, text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
-        customButton.layer.cornerRadius = customButton.frame.size.height * (10 / 48)
+        customButton.setcornerRadius(cornerRadius: 10)
         customButton.backgroundColor = background
         customButton.setFontButton(title: text, textColor: textColor)
     }
 
-    func setTitle(text: String) {
-        title = text
-    }
-
-    func loadFont() {
-        let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
-            NSAttributedString.Key.font: UIFont.sfProDisplay(font: .medium, size: 20.scaleW),
-        ]
-
-        navigationController?.navigationBar.titleTextAttributes = attrs
-    }
-
     func backViewController() {
-        navigationController?.navigationBar.tintColor = .black
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "backImage"),
             style: .done,
@@ -47,8 +33,6 @@ class BaseViewController: UIViewController {
     }
 
     @objc func backButtonPressed() {
-        print("back")
-
         popViewController()
     }
 
@@ -58,5 +42,3 @@ class BaseViewController: UIViewController {
     }
 }
 
-extension UITextField: UITextFieldDelegate {
-}

@@ -11,7 +11,7 @@ extension UIColor {
     static func hexStringToUIColor(color: Color) -> UIColor {
         return hexStringToUIColor(hex: color.rawValue)
     }
-    
+
     static func hexStringToUIColor(hex: String) -> UIColor {
         var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 

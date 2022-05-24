@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		93E8AA682C888F4199253A9B /* Pods_CryptoStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */; };
 		B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE5E283B366C00CB5EB6 /* UIButton.swift */; };
+		B431DE61283B5EBD00CB5EB6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE60283B5EBD00CB5EB6 /* Helper.swift */; };
+		B431DE63283B831900CB5EB6 /* BaseNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE62283B831900CB5EB6 /* BaseNibView.swift */; };
+		B431DE67283BBE0200CB5EB6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE65283BBE0200CB5EB6 /* CreateAccountViewController.swift */; };
+		B431DE68283BBE0200CB5EB6 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE66283BBE0200CB5EB6 /* CreateAccountViewController.xib */; };
+		B431DE6E283C674C00CB5EB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE6C283C674C00CB5EB6 /* HomeViewController.swift */; };
+		B431DE6F283C674C00CB5EB6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE6D283C674C00CB5EB6 /* HomeViewController.xib */; };
+		B431DE72283C675C00CB5EB6 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE70283C675C00CB5EB6 /* ChartsViewController.swift */; };
+		B431DE73283C675C00CB5EB6 /* ChartsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE71283C675C00CB5EB6 /* ChartsViewController.xib */; };
+		B431DE76283C677000CB5EB6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE74283C677000CB5EB6 /* SettingViewController.swift */; };
+		B431DE77283C677000CB5EB6 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE75283C677000CB5EB6 /* SettingViewController.xib */; };
+		B431DE79283C680D00CB5EB6 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE78283C680D00CB5EB6 /* CustomTabBarView.swift */; };
+		B431DE7C283C683600CB5EB6 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE7B283C683600CB5EB6 /* CustomTabBarView.xib */; };
+		B431DE7E283C884600CB5EB6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE7D283C884600CB5EB6 /* UIView.swift */; };
 		B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976C2835D5F900F47ADF /* AppDelegate.swift */; };
 		B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976E2835D5F900F47ADF /* SceneDelegate.swift */; };
 		B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */; };
@@ -34,10 +47,8 @@
 		B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA01B28364E18007D320E /* DataInputView.swift */; };
 		B4ADA02028367234007D320E /* LoginPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA01E28367234007D320E /* LoginPhoneViewController.swift */; };
 		B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01F28367234007D320E /* LoginPhoneViewController.xib */; };
-		B4ADA02328376ABA007D320E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02228376ABA007D320E /* UITextField.swift */; };
 		B4ADA02528378FE9007D320E /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02428378FE9007D320E /* Int.swift */; };
-		B4ADA027283793CA007D320E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA026283793CA007D320E /* Double.swift */; };
-		B4ADA02A2837951E007D320E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA0292837951E007D320E /* CGFloat.swift */; };
+		B4ADA02A2837951E007D320E /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA0292837951E007D320E /* FloatingPoint.swift */; };
 		B4ADA02C28379579007D320E /* CustomNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA02B28379579007D320E /* CustomNavigationBarView.xib */; };
 		B4ADA02E28379593007D320E /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02D28379593007D320E /* CustomNavigationBarView.swift */; };
 		B4ADA030283A414F007D320E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA02F283A414F007D320E /* UILabel.swift */; };
@@ -55,6 +66,19 @@
 		1466E29506BB2121AE6E4F56 /* Pods-CryptoStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoStar.debug.xcconfig"; path = "Target Support Files/Pods-CryptoStar/Pods-CryptoStar.debug.xcconfig"; sourceTree = "<group>"; };
 		3BBFC6DB7D056556EC576339 /* Pods_CryptoStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B431DE5E283B366C00CB5EB6 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		B431DE60283B5EBD00CB5EB6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B431DE62283B831900CB5EB6 /* BaseNibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNibView.swift; sourceTree = "<group>"; };
+		B431DE65283BBE0200CB5EB6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B431DE66283BBE0200CB5EB6 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		B431DE6C283C674C00CB5EB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B431DE6D283C674C00CB5EB6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B431DE70283C675C00CB5EB6 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		B431DE71283C675C00CB5EB6 /* ChartsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsViewController.xib; sourceTree = "<group>"; };
+		B431DE74283C677000CB5EB6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B431DE75283C677000CB5EB6 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		B431DE78283C680D00CB5EB6 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		B431DE7B283C683600CB5EB6 /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
+		B431DE7D283C884600CB5EB6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B43E97692835D5F900F47ADF /* CryptoStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43E976C2835D5F900F47ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43E976E2835D5F900F47ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +106,8 @@
 		B4ADA01B28364E18007D320E /* DataInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputView.swift; sourceTree = "<group>"; };
 		B4ADA01E28367234007D320E /* LoginPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPhoneViewController.swift; sourceTree = "<group>"; };
 		B4ADA01F28367234007D320E /* LoginPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPhoneViewController.xib; sourceTree = "<group>"; };
-		B4ADA02228376ABA007D320E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		B4ADA02428378FE9007D320E /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		B4ADA026283793CA007D320E /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		B4ADA0292837951E007D320E /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		B4ADA0292837951E007D320E /* FloatingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPoint.swift; sourceTree = "<group>"; };
 		B4ADA02B28379579007D320E /* CustomNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationBarView.xib; sourceTree = "<group>"; };
 		B4ADA02D28379593007D320E /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
 		B4ADA02F283A414F007D320E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -110,6 +132,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B431DE64283BBDCE00CB5EB6 /* CreateAccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE65283BBE0200CB5EB6 /* CreateAccountViewController.swift */,
+				B431DE66283BBE0200CB5EB6 /* CreateAccountViewController.xib */,
+			);
+			path = CreateAccountViewController;
+			sourceTree = "<group>";
+		};
+		B431DE69283C66DC00CB5EB6 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE6C283C674C00CB5EB6 /* HomeViewController.swift */,
+				B431DE6D283C674C00CB5EB6 /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		B431DE6A283C66E800CB5EB6 /* ChartsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE70283C675C00CB5EB6 /* ChartsViewController.swift */,
+				B431DE71283C675C00CB5EB6 /* ChartsViewController.xib */,
+			);
+			path = ChartsViewController;
+			sourceTree = "<group>";
+		};
+		B431DE6B283C670000CB5EB6 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE74283C677000CB5EB6 /* SettingViewController.swift */,
+				B431DE75283C677000CB5EB6 /* SettingViewController.xib */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		B431DE7A283C681300CB5EB6 /* CustomTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE78283C680D00CB5EB6 /* CustomTabBarView.swift */,
+				B431DE7B283C683600CB5EB6 /* CustomTabBarView.xib */,
+			);
+			path = CustomTabBarView;
+			sourceTree = "<group>";
+		};
 		B43E97602835D5F900F47ADF = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +229,7 @@
 				B43E97A02835EACC00F47ADF /* BaseViewController.swift */,
 				B43E97A22835ED5500F47ADF /* BaseTabBarController.swift */,
 				B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */,
+				B431DE62283B831900CB5EB6 /* BaseNibView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -169,6 +237,10 @@
 		B43E97852835D75800F47ADF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B431DE69283C66DC00CB5EB6 /* HomeViewController */,
+				B431DE6A283C66E800CB5EB6 /* ChartsViewController */,
+				B431DE6B283C670000CB5EB6 /* SettingViewController */,
+				B431DE64283BBDCE00CB5EB6 /* CreateAccountViewController */,
 				B4BB0075283A5DD70013E445 /* OTPTextField */,
 				B4BB006E283A56C00013E445 /* LoginEmail */,
 				B4ADA031283A428C007D320E /* VerifyPhoneNumber */,
@@ -186,12 +258,11 @@
 				B43E979B2835E96600F47ADF /* UIViewController.swift */,
 				B43E979D2835E9C800F47ADF /* UITableView.swift */,
 				B43E97AE2835FA1300F47ADF /* UIFont.swift */,
-				B4ADA02228376ABA007D320E /* UITextField.swift */,
 				B4ADA02428378FE9007D320E /* Int.swift */,
-				B4ADA026283793CA007D320E /* Double.swift */,
-				B4ADA0292837951E007D320E /* CGFloat.swift */,
+				B4ADA0292837951E007D320E /* FloatingPoint.swift */,
 				B4ADA02F283A414F007D320E /* UILabel.swift */,
 				B431DE5E283B366C00CB5EB6 /* UIButton.swift */,
+				B431DE7D283C884600CB5EB6 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +272,7 @@
 			children = (
 				B49C210E28361ABB00D4FCEE /* ScreenSize */,
 				B43E978F2835D9AA00F47ADF /* Enum */,
+				B431DE60283B5EBD00CB5EB6 /* Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -248,6 +320,7 @@
 		B43E978D2835D8A200F47ADF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B431DE7A283C681300CB5EB6 /* CustomTabBarView */,
 				B4BB006F283A5D330013E445 /* OTPView */,
 				B4ADA02828379469007D320E /* CustomNavigationBarView */,
 				B4ADA01828364DC2007D320E /* DataInput */,
@@ -454,15 +527,20 @@
 			files = (
 				B4ADA035283A42CA007D320E /* VerifyPhoneNumberViewController.xib in Resources */,
 				B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */,
+				B431DE6F283C674C00CB5EB6 /* HomeViewController.xib in Resources */,
+				B431DE77283C677000CB5EB6 /* SettingViewController.xib in Resources */,
 				B49C211828362E1300D4FCEE /* SF-Pro-Display-Medium.otf in Resources */,
 				B4ADA01328364258007D320E /* WelcomeViewController.xib in Resources */,
 				B49C211728362E1300D4FCEE /* SF-Pro-Display-Bold.otf in Resources */,
 				B49C211928362E1300D4FCEE /* SF-Pro-Display-Semibold.otf in Resources */,
+				B431DE68283BBE0200CB5EB6 /* CreateAccountViewController.xib in Resources */,
 				B4BB0071283A5D4F0013E445 /* OTPView.xib in Resources */,
 				B4ADA02C28379579007D320E /* CustomNavigationBarView.xib in Resources */,
+				B431DE7C283C683600CB5EB6 /* CustomTabBarView.xib in Resources */,
 				B43E977C2835D5FD00F47ADF /* LaunchScreen.storyboard in Resources */,
 				B49C211628362E1300D4FCEE /* SF-Pro-Display-Regular.otf in Resources */,
 				B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */,
+				B431DE73283C675C00CB5EB6 /* ChartsViewController.xib in Resources */,
 				B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */,
 				B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */,
 			);
@@ -500,7 +578,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4ADA02A2837951E007D320E /* CGFloat.swift in Sources */,
+				B431DE67283BBE0200CB5EB6 /* CreateAccountViewController.swift in Sources */,
+				B4ADA02A2837951E007D320E /* FloatingPoint.swift in Sources */,
+				B431DE6E283C674C00CB5EB6 /* HomeViewController.swift in Sources */,
 				B43E97932835E57500F47ADF /* UIColor.swift in Sources */,
 				B43E97A12835EACC00F47ADF /* BaseViewController.swift in Sources */,
 				B4BB007A283A71D00013E445 /* LoginEmailViewController.swift in Sources */,
@@ -515,16 +595,20 @@
 				B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */,
 				B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */,
 				B4ADA02028367234007D320E /* LoginPhoneViewController.swift in Sources */,
+				B431DE7E283C884600CB5EB6 /* UIView.swift in Sources */,
+				B431DE61283B5EBD00CB5EB6 /* Helper.swift in Sources */,
 				B4BB0073283A5D650013E445 /* OTPView.swift in Sources */,
 				B4ADA030283A414F007D320E /* UILabel.swift in Sources */,
 				B43E97AF2835FA1300F47ADF /* UIFont.swift in Sources */,
-				B4ADA027283793CA007D320E /* Double.swift in Sources */,
+				B431DE79283C680D00CB5EB6 /* CustomTabBarView.swift in Sources */,
 				B4ADA034283A42CA007D320E /* VerifyPhoneNumberViewController.swift in Sources */,
+				B431DE76283C677000CB5EB6 /* SettingViewController.swift in Sources */,
 				B43E979A2835E92300F47ADF /* NSObject.swift in Sources */,
 				B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */,
+				B431DE72283C675C00CB5EB6 /* ChartsViewController.swift in Sources */,
 				B4ADA02528378FE9007D320E /* Int.swift in Sources */,
-				B4ADA02328376ABA007D320E /* UITextField.swift in Sources */,
 				B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */,
+				B431DE63283B831900CB5EB6 /* BaseNibView.swift in Sources */,
 				B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */,
 				B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */,
 			);

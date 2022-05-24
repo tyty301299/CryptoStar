@@ -8,8 +8,7 @@
 import UIKit
 
 extension UIFont {
-    static func sfProDisplay(font: Font, size: CGFloat) -> UIFont {
-        
+    static func sfProDisplay(font: Font, size: Double) -> UIFont {
         return UIFont(name: font.rawValue, size: size.scaleW) ?? UIFont()
     }
 }

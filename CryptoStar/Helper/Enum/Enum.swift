@@ -38,21 +38,22 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
     case charts = "Charts"
     case setting = "Setting"
     case login = "Login"
-
+    case notificationTitleCreateAccount = "Sync across devices with your Account"
+    case cretateAccountButton = "Create Account"
     func getTitle() -> String {
         return rawValue
     }
 }
 
 enum TitleLabel: String, CaseIterable, TitleProtocol {
-    case name = "YOUR NAME"
-    case email = "EMAIL ID"
-    case pass = "PASSWORD"
-    case confirmPass = "CONFIRM PASSWORD"
+    case yourName = "YOUR NAME"
+    case emailID = "EMAIL ID"
+    case passWord = "PASSWORD"
+    case confirmPassWord = "CONFIRM PASSWORD"
     case phoneNumber = "Phone Number"
     case resend = "Resend"
-    case login = "Login Now"
-    case signup = "Signup Now"
+    case loginNow = "Login Now"
+    case signupNow = "Signup Now"
     case dontHaveAnAccount = "Don't have an account?"
 
     func getTitle() -> String {
