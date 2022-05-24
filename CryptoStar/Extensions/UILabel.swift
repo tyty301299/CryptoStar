@@ -8,7 +8,7 @@
 import UIKit
 
 extension UILabel {
-    func setTitle<T: TitleProtocol>(title: T) {
+    func setTitle<T: TitleProtocol>(_ title: T) {
         text = title.getTitle()
     }
 }

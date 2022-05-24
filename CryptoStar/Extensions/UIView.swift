@@ -8,7 +8,8 @@
 import UIKit
 
 extension UIView {
-    func setcornerRadius(cornerRadius: Double) {
+    func setCornerRadius(cornerRadius: Double) {
+        layer.masksToBounds = true
         layer.cornerRadius = cornerRadius.scaleW
     }
 }

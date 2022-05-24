@@ -20,7 +20,7 @@ class CustomNavigationBarView: BaseNibView {
     func setupStyleNavigaitonBarLabel() {
         titleLabel.font = .sfProDisplay(font: .medium, size: 20)
         titleLabel.textColor = .black
-        notificationLabel.textColor = .hexStringToUIColor(color: .titleColorLabel)
+        notificationLabel.textColor = .hexStringUIColor(color: .titleColorLabel)
         notificationLabel.font = .sfProDisplay(font: .regular, size: 18)
     }
 }

@@ -32,8 +32,8 @@ class WelcomeViewController: BaseViewController {
         spaceTopLoginPhoneButtonLC.constant = 18.scaleH
         topLoginPhoneButtonLC.constant = 14.scaleH
 
-        setupButton(customButton: loginPhoneButton, text: .loginPhone, background: .black, textColor: .white)
-        setupButton(customButton: loginEmailButton, text: .loginEmail, background: .black, textColor: .white)
+        loginPhoneButton.setupButton(text: .loginPhone, background: .black, textColor: .white)
+        loginEmailButton.setupButton(text: .loginEmail, background: .black, textColor: .white)
     }
 
     @IBAction func loginEmail(_ sender: Any) {

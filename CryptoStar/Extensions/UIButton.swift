@@ -13,4 +13,11 @@ extension UIButton {
         text.addAttributes([.font: UIFont.sfProDisplay(font: .medium, size: 16.scaleW), .foregroundColor: textColor], range: NSRange(location: 0, length: text.length))
         setAttributedTitle(text, for: .normal)
     }
+
+    func setupButton(text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
+        setFontButton(title: text, textColor: textColor)
+        setCornerRadius(cornerRadius: 10)
+        backgroundColor = background
+        setFontButton(title: text, textColor: textColor)
+    }
 }

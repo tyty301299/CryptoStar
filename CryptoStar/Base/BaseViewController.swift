@@ -17,12 +17,6 @@ class BaseViewController: UIViewController {
         print("[HOT] \(self.className) deinit")
     }
 
-    func setupButton(customButton: UIButton, text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
-        customButton.setcornerRadius(cornerRadius: 10)
-        customButton.backgroundColor = background
-        customButton.setFontButton(title: text, textColor: textColor)
-    }
-
     func backViewController() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "backImage"),

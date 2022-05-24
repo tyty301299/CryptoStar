@@ -8,13 +8,13 @@
 import Foundation
 
 enum Color: String, CaseIterable {
-    case backgroundColorButton = "#141A22"
-    case titleColorButton = "#FBFBFB"
-    case titleColorLabel = "#6E7F8D"
-    case borderTextFieldColor = "#EFF0F4"
-    case titleColorUser = "#006DFF"
-    case cryptoUpColor = "#17B978"
-    case cryptoDownColor = "#DC2F2F"
+    case backgroundColorButton = "141A22"
+    case titleColorButton = "FBFBFB"
+    case titleColorLabel = "6E7F8D"
+    case borderTextFieldColor = "EFF0F4"
+    case titleColorUser = "006DFF"
+    case cryptoUpColor = "17B978"
+    case cryptoDownColor = "DC2F2F"
 }
 
 enum Font: String, CaseIterable {

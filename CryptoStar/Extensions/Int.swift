@@ -9,10 +9,10 @@ import UIKit
 
 extension Int {
     var scaleW: CGFloat {
-        return (CGFloat(self) * (Helper.isPad ? ratioIpadPro.width : ratioIphoneX.width))
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.width : Ratio.iphoneX.width))
     }
 
     var scaleH: CGFloat {
-        return (CGFloat(self) * (Helper.isPad ? ratioIpadPro.height : ratioIphoneX.height))
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.ipad.height))
     }
 }

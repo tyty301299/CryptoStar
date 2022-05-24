@@ -7,16 +7,12 @@
 
 import UIKit
 
-protocol scaleProtocol {
-    func getScale() -> CGFloat
-}
-
 extension FloatingPoint where Self == Double {
-    var scaleW: Self {
-        return self * Self(Helper.isPad ? ratioIpadPro.width : ratioIphoneX.width)
+    var scaleW: CGFloat {
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.width : Ratio.iphoneX.width))
     }
 
-    var scaleH: Self {
-        return self * Self(Helper.isPad ? ratioIpadPro.height : ratioIphoneX.height)
+    var scaleH: CGFloat {
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.ipad.height))
     }
 }

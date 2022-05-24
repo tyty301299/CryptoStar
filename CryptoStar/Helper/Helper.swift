@@ -8,8 +8,6 @@
 import UIKit
 
 class Helper {
-    static var shared = Helper()
-
     static var isPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
