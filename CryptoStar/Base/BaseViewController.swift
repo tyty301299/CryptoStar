@@ -17,11 +17,22 @@ class BaseViewController: UIViewController {
         print("[HOT] \(self.className) deinit")
     }
 
-    func setupButton(customButton: UIButton, text: String, background: UIColor, textColor: UIColor) {
-        customButton.layer.cornerRadius = customButton.frame.size.height * ( 10 / 48)
-        customButton.setTitle(text, for: .normal)
-        customButton.backgroundColor = background
-        customButton.setTitleColor(textColor, for: .normal)
-        customButton.titleLabel?.font = .sfProDisplay(font: .semibold, size: 16)
+    func backViewController() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "backImage"),
+            style: .done,
+            target: self,
+            action: #selector(backButtonPressed)
+        )
+    }
+
+    @objc func backButtonPressed() {
+        popViewController()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
+

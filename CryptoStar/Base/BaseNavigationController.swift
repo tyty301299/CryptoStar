@@ -8,4 +8,20 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.isTranslucent = true
+        navigationBar.isHidden = true
+        navigationBar.tintColor = .black
+        self.loadFont()
+    }
+
+    func loadFont() {
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.sfProDisplay(font: .medium, size: 20.scaleW),
+        ]
+
+        navigationController?.navigationBar.titleTextAttributes = attrs
+    }
 }

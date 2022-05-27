@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationBarView" customModule="CryptoStar" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="Xco-2H-Lv1" id="0Je-5b-yDA"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="k4l-Ai-S8B"/>
+                <outlet property="leadingBackButtonLC" destination="M2e-De-zFh" id="iQA-MV-hb1"/>
+                <outlet property="notificationLabel" destination="q0K-hr-edR" id="LpT-nz-GyX"/>
+                <outlet property="titleLabel" destination="QQl-b3-0ax" id="dp6-hu-Z0u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0s6-bc-5fB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="88"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-mG-3re">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xco-2H-Lv1">
+                                    <rect key="frame" x="25" y="0.0" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="5lk-AT-iRk"/>
+                                        <constraint firstAttribute="height" constant="44" id="YF0-P1-Slp"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="" image="backImage">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQl-b3-0ax">
+                                    <rect key="frame" x="205" y="10" width="4.5" height="24"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="QQl-b3-0ax" firstAttribute="centerY" secondItem="jCi-mG-3re" secondAttribute="centerY" id="0Nd-ph-VYj"/>
+                                <constraint firstItem="Xco-2H-Lv1" firstAttribute="leading" secondItem="jCi-mG-3re" secondAttribute="leading" constant="25" id="M2e-De-zFh"/>
+                                <constraint firstAttribute="height" constant="44" id="W6q-uw-cNO"/>
+                                <constraint firstItem="Xco-2H-Lv1" firstAttribute="centerY" secondItem="jCi-mG-3re" secondAttribute="centerY" id="aVu-Cx-vBK"/>
+                                <constraint firstItem="QQl-b3-0ax" firstAttribute="centerX" secondItem="jCi-mG-3re" secondAttribute="centerX" id="bfe-ps-fgW"/>
+                            </constraints>
+                        </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0K-hr-edR">
+                            <rect key="frame" x="205" y="67" width="4.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="q0K-hr-edR" secondAttribute="bottom" id="8vl-wF-cJ8"/>
+                        <constraint firstItem="jCi-mG-3re" firstAttribute="top" secondItem="0s6-bc-5fB" secondAttribute="top" id="F9O-ow-Y59"/>
+                        <constraint firstItem="jCi-mG-3re" firstAttribute="leading" secondItem="0s6-bc-5fB" secondAttribute="leading" id="m6P-H3-0cy"/>
+                        <constraint firstAttribute="trailing" secondItem="jCi-mG-3re" secondAttribute="trailing" id="nOT-PZ-h40"/>
+                        <constraint firstItem="q0K-hr-edR" firstAttribute="centerX" secondItem="0s6-bc-5fB" secondAttribute="centerX" id="yp7-lA-9lq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0s6-bc-5fB" secondAttribute="bottom" id="1eU-Oz-2dg"/>
+                <constraint firstItem="0s6-bc-5fB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7x4-xR-La4"/>
+                <constraint firstItem="0s6-bc-5fB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ASL-cy-Cu4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0s6-bc-5fB" secondAttribute="trailing" id="OO6-Uq-hfH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="218.30357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backImage" width="26" height="17"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
