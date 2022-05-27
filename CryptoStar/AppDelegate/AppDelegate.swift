@@ -6,8 +6,8 @@
 //
 
 import CoreData
+import FirebaseCore
 import UIKit
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+        FirebaseApp.configure()
         return true
     }
 }

@@ -22,6 +22,12 @@
 		B431DE79283C680D00CB5EB6 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE78283C680D00CB5EB6 /* CustomTabBarView.swift */; };
 		B431DE7C283C683600CB5EB6 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE7B283C683600CB5EB6 /* CustomTabBarView.xib */; };
 		B431DE7E283C884600CB5EB6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE7D283C884600CB5EB6 /* UIView.swift */; };
+		B431DE81283DBF4200CB5EB6 /* TitleTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE80283DBF4200CB5EB6 /* TitleTabBarView.swift */; };
+		B431DE83283DBF5700CB5EB6 /* TitleTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE82283DBF5700CB5EB6 /* TitleTabBarView.xib */; };
+		B431DE8B283E1F6900CB5EB6 /* CoinPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE89283E1F6900CB5EB6 /* CoinPriceCell.swift */; };
+		B431DE8C283E1F6900CB5EB6 /* CoinPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE8A283E1F6900CB5EB6 /* CoinPriceCell.xib */; };
+		B431DE95283E652200CB5EB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431DE93283E652200CB5EB6 /* MainViewController.swift */; };
+		B431DE96283E652200CB5EB6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431DE94283E652200CB5EB6 /* MainViewController.xib */; };
 		B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976C2835D5F900F47ADF /* AppDelegate.swift */; };
 		B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E976E2835D5F900F47ADF /* SceneDelegate.swift */; };
 		B43E97772835D5F900F47ADF /* CryptoStar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43E97752835D5F900F47ADF /* CryptoStar.xcdatamodeld */; };
@@ -37,7 +43,8 @@
 		B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */; };
 		B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97A62835EF4F00F47ADF /* WelcomeViewController.swift */; };
 		B43E97AF2835FA1300F47ADF /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E97AE2835FA1300F47ADF /* UIFont.swift */; };
-		B49C211028361B0300D4FCEE /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C210F28361B0300D4FCEE /* ScreenSize.swift */; };
+		B45D7632283F125E0009C7DF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D7631283F125E0009C7DF /* AuthManager.swift */; };
+		B49C211028361B0300D4FCEE /* Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C210F28361B0300D4FCEE /* Ratio.swift */; };
 		B49C211628362E1300D4FCEE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211228362E1300D4FCEE /* SF-Pro-Display-Regular.otf */; };
 		B49C211728362E1300D4FCEE /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211328362E1300D4FCEE /* SF-Pro-Display-Bold.otf */; };
 		B49C211828362E1300D4FCEE /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211428362E1300D4FCEE /* SF-Pro-Display-Medium.otf */; };
@@ -59,6 +66,7 @@
 		B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB0076283A5DF90013E445 /* OTPTextField.swift */; };
 		B4BB007A283A71D00013E445 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BB0078283A71D00013E445 /* LoginEmailViewController.swift */; };
 		B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BB0079283A71D00013E445 /* LoginEmailViewController.xib */; };
+		B4F7A8E0283F1CBB005087B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4F7A8DF283F1CBB005087B2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +87,12 @@
 		B431DE78283C680D00CB5EB6 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		B431DE7B283C683600CB5EB6 /* CustomTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		B431DE7D283C884600CB5EB6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B431DE80283DBF4200CB5EB6 /* TitleTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTabBarView.swift; sourceTree = "<group>"; };
+		B431DE82283DBF5700CB5EB6 /* TitleTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTabBarView.xib; sourceTree = "<group>"; };
+		B431DE89283E1F6900CB5EB6 /* CoinPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceCell.swift; sourceTree = "<group>"; };
+		B431DE8A283E1F6900CB5EB6 /* CoinPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinPriceCell.xib; sourceTree = "<group>"; };
+		B431DE93283E652200CB5EB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B431DE94283E652200CB5EB6 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		B43E97692835D5F900F47ADF /* CryptoStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43E976C2835D5F900F47ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43E976E2835D5F900F47ADF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +110,8 @@
 		B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		B43E97A62835EF4F00F47ADF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B43E97AE2835FA1300F47ADF /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		B49C210F28361B0300D4FCEE /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		B45D7631283F125E0009C7DF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		B49C210F28361B0300D4FCEE /* Ratio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratio.swift; sourceTree = "<group>"; };
 		B49C211228362E1300D4FCEE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		B49C211328362E1300D4FCEE /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		B49C211428362E1300D4FCEE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
@@ -118,6 +133,7 @@
 		B4BB0076283A5DF90013E445 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		B4BB0078283A71D00013E445 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		B4BB0079283A71D00013E445 /* LoginEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginEmailViewController.xib; sourceTree = "<group>"; };
+		B4F7A8DF283F1CBB005087B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +193,33 @@
 			path = CustomTabBarView;
 			sourceTree = "<group>";
 		};
+		B431DE7F283DBE8500CB5EB6 /* TitleTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE80283DBF4200CB5EB6 /* TitleTabBarView.swift */,
+				B431DE82283DBF5700CB5EB6 /* TitleTabBarView.xib */,
+			);
+			path = TitleTabBarView;
+			sourceTree = "<group>";
+		};
+		B431DE88283DD8B700CB5EB6 /* CoinPriceCell */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE89283E1F6900CB5EB6 /* CoinPriceCell.swift */,
+				B431DE8A283E1F6900CB5EB6 /* CoinPriceCell.xib */,
+			);
+			path = CoinPriceCell;
+			sourceTree = "<group>";
+		};
+		B431DE92283E650D00CB5EB6 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B431DE93283E652200CB5EB6 /* MainViewController.swift */,
+				B431DE94283E652200CB5EB6 /* MainViewController.xib */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		B43E97602835D5F900F47ADF = {
 			isa = PBXGroup;
 			children = (
@@ -226,8 +269,8 @@
 		B43E97842835D74F00F47ADF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B43E97A02835EACC00F47ADF /* BaseViewController.swift */,
 				B43E97A22835ED5500F47ADF /* BaseTabBarController.swift */,
+				B43E97A02835EACC00F47ADF /* BaseViewController.swift */,
 				B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */,
 				B431DE62283B831900CB5EB6 /* BaseNibView.swift */,
 			);
@@ -237,6 +280,7 @@
 		B43E97852835D75800F47ADF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B431DE92283E650D00CB5EB6 /* MainViewController */,
 				B431DE69283C66DC00CB5EB6 /* HomeViewController */,
 				B431DE6A283C66E800CB5EB6 /* ChartsViewController */,
 				B431DE6B283C670000CB5EB6 /* SettingViewController */,
@@ -270,7 +314,7 @@
 		B43E97872835D77E00F47ADF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				B49C210E28361ABB00D4FCEE /* ScreenSize */,
+				B49C210E28361ABB00D4FCEE /* Ratio */,
 				B43E978F2835D9AA00F47ADF /* Enum */,
 				B431DE60283B5EBD00CB5EB6 /* Helper.swift */,
 			);
@@ -287,6 +331,7 @@
 		B43E97892835D7B900F47ADF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B45D7631283F125E0009C7DF /* AuthManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +339,7 @@
 		B43E978A2835D7C600F47ADF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4F7A8DF283F1CBB005087B2 /* GoogleService-Info.plist */,
 				B43E97AB2835F6B100F47ADF /* Font */,
 				B43E97782835D5FD00F47ADF /* Assets.xcassets */,
 				B43E977A2835D5FD00F47ADF /* LaunchScreen.storyboard */,
@@ -320,6 +366,8 @@
 		B43E978D2835D8A200F47ADF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B431DE88283DD8B700CB5EB6 /* CoinPriceCell */,
+				B431DE7F283DBE8500CB5EB6 /* TitleTabBarView */,
 				B431DE7A283C681300CB5EB6 /* CustomTabBarView */,
 				B4BB006F283A5D330013E445 /* OTPView */,
 				B4ADA02828379469007D320E /* CustomNavigationBarView */,
@@ -385,12 +433,12 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		B49C210E28361ABB00D4FCEE /* ScreenSize */ = {
+		B49C210E28361ABB00D4FCEE /* Ratio */ = {
 			isa = PBXGroup;
 			children = (
-				B49C210F28361B0300D4FCEE /* ScreenSize.swift */,
+				B49C210F28361B0300D4FCEE /* Ratio.swift */,
 			);
-			path = ScreenSize;
+			path = Ratio;
 			sourceTree = "<group>";
 		};
 		B49C211128362E1300D4FCEE /* SF-Pro-Display */ = {
@@ -477,6 +525,7 @@
 				B43E97652835D5F900F47ADF /* Sources */,
 				B43E97662835D5F900F47ADF /* Frameworks */,
 				B43E97672835D5F900F47ADF /* Resources */,
+				99B15439601ADF9CB5534E7F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -527,6 +576,7 @@
 			files = (
 				B4ADA035283A42CA007D320E /* VerifyPhoneNumberViewController.xib in Resources */,
 				B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */,
+				B431DE8C283E1F6900CB5EB6 /* CoinPriceCell.xib in Resources */,
 				B431DE6F283C674C00CB5EB6 /* HomeViewController.xib in Resources */,
 				B431DE77283C677000CB5EB6 /* SettingViewController.xib in Resources */,
 				B49C211828362E1300D4FCEE /* SF-Pro-Display-Medium.otf in Resources */,
@@ -537,11 +587,14 @@
 				B4BB0071283A5D4F0013E445 /* OTPView.xib in Resources */,
 				B4ADA02C28379579007D320E /* CustomNavigationBarView.xib in Resources */,
 				B431DE7C283C683600CB5EB6 /* CustomTabBarView.xib in Resources */,
+				B4F7A8E0283F1CBB005087B2 /* GoogleService-Info.plist in Resources */,
 				B43E977C2835D5FD00F47ADF /* LaunchScreen.storyboard in Resources */,
+				B431DE83283DBF5700CB5EB6 /* TitleTabBarView.xib in Resources */,
 				B49C211628362E1300D4FCEE /* SF-Pro-Display-Regular.otf in Resources */,
 				B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */,
 				B431DE73283C675C00CB5EB6 /* ChartsViewController.xib in Resources */,
 				B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */,
+				B431DE96283E652200CB5EB6 /* MainViewController.xib in Resources */,
 				B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +624,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		99B15439601ADF9CB5534E7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoStar/Pods-CryptoStar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoStar/Pods-CryptoStar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoStar/Pods-CryptoStar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -579,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B431DE67283BBE0200CB5EB6 /* CreateAccountViewController.swift in Sources */,
+				B431DE81283DBF4200CB5EB6 /* TitleTabBarView.swift in Sources */,
 				B4ADA02A2837951E007D320E /* FloatingPoint.swift in Sources */,
 				B431DE6E283C674C00CB5EB6 /* HomeViewController.swift in Sources */,
 				B43E97932835E57500F47ADF /* UIColor.swift in Sources */,
@@ -587,10 +658,12 @@
 				B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */,
 				B43E979C2835E96600F47ADF /* UIViewController.swift in Sources */,
 				B43E97952835E59B00F47ADF /* Enum.swift in Sources */,
-				B49C211028361B0300D4FCEE /* ScreenSize.swift in Sources */,
+				B49C211028361B0300D4FCEE /* Ratio.swift in Sources */,
 				B43E976D2835D5F900F47ADF /* AppDelegate.swift in Sources */,
+				B431DE8B283E1F6900CB5EB6 /* CoinPriceCell.swift in Sources */,
 				B4ADA02E28379593007D320E /* CustomNavigationBarView.swift in Sources */,
 				B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */,
+				B431DE95283E652200CB5EB6 /* MainViewController.swift in Sources */,
 				B43E97A32835ED5500F47ADF /* BaseTabBarController.swift in Sources */,
 				B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */,
 				B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */,
@@ -609,6 +682,7 @@
 				B4ADA02528378FE9007D320E /* Int.swift in Sources */,
 				B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */,
 				B431DE63283B831900CB5EB6 /* BaseNibView.swift in Sources */,
+				B45D7632283F125E0009C7DF /* AuthManager.swift in Sources */,
 				B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */,
 				B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */,
 			);
@@ -679,7 +753,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -734,7 +808,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
