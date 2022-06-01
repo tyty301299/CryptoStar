@@ -14,7 +14,7 @@ extension UIButton {
         setAttributedTitle(text, for: .normal)
     }
 
-    func setupButton(text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
+    func setUpButton(text: TitleNavigationBar, background: UIColor, textColor: UIColor) {
         setFontButton(title: text, textColor: textColor)
         setCornerRadius(cornerRadius: 10)
         backgroundColor = background

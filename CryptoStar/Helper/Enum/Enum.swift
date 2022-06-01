@@ -60,3 +60,14 @@ enum TitleLabel: String, CaseIterable, TitleProtocol {
         return rawValue
     }
 }
+
+enum TabbarType: Int {
+    case home = 0
+    case chart = 1
+    case setting = 2
+}
+
+enum ClosureResult<String> {
+    case success(data: String)
+    case failure(error: Error)
+}

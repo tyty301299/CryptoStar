@@ -6,5 +6,8 @@ target 'CryptoStar' do
   use_frameworks!
 
   # Pods for CryptoStar
-
-end
+  pod 'Firebase/Auth'
+  pod 'FirebaseCore'
+  pod 'FirebaseMessaging'
+  
+end 

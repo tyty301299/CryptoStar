@@ -17,7 +17,7 @@ class CustomNavigationBarView: BaseNibView {
         leadingBackButtonLC.constant = 25.scaleW
     }
 
-    func setupStyleNavigaitonBarLabel() {
+    func setUpStyleNavigaitonBarLabel() {
         titleLabel.font = .sfProDisplay(font: .medium, size: 20)
         titleLabel.textColor = .black
         notificationLabel.textColor = .hexStringUIColor(color: .titleColorLabel)
