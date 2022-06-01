@@ -2,12 +2,14 @@
 # platform :ios, '9.0'
 
 target 'CryptoStar' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+   # Comment the next line if you don't want to use dynamic frameworks
+   use_frameworks !
 
   # Pods for CryptoStar
-  pod 'Firebase/Auth'
-  pod 'FirebaseCore'
-  pod 'FirebaseMessaging'
-  
-end 
+pod 'Firebase/Auth'
+pod 'FirebaseCore'
+pod 'FirebaseMessaging'
+pod 'Firebase/DynamicLinks'
+
+end
+

@@ -12,7 +12,7 @@ class AuthManager {
     static let shared = AuthManager()
     private let auth = Auth.auth()
     private var verificationID: String?
-    public func startAuth(phoneNumber: String, completion: @escaping (ClosureResult<String>) -> Void) {
+    func startAuth(phoneNumber: String, completion: @escaping (ClosureResult<String>) -> Void) {
         PhoneAuthProvider.provider()
             .verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
                 if let error = error {
@@ -49,7 +49,6 @@ class AuthManager {
                 completion(.failure(error: error))
                 return
             }
-
             completion(.success(data: "success"))
         }
     }
@@ -61,6 +60,24 @@ class AuthManager {
                 return
             }
 
+            completion(.success(data: "success"))
+        }
+    }
+
+    func signInEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
+        let actionCodeSettings = ActionCodeSettings()
+        actionCodeSettings.url = URL(string: "https://cryptostar-25b8b.firebaseapp.com")
+        actionCodeSettings.handleCodeInApp = true
+        actionCodeSettings.dynamicLinkDomain = "cryptostar.page.link"
+        actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+        print(Bundle.main.bundleIdentifier!)
+        Auth.auth().sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { error in
+            if let error = error {
+                completion(.failure(error: error))
+                return
+            }
+            UserDefaults.standard.set(email, forKey: "Email")
+            UserDefaults.standard.set(password, forKey: "Pass")
             completion(.success(data: "success"))
         }
     }

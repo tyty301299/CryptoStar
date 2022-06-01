@@ -11,7 +11,6 @@ extension UIView {
     func setCornerRadius(cornerRadius: Double) {
         layer.masksToBounds = true
         layer.cornerRadius = cornerRadius.scaleW
-   
     }
 
     func roundCorners(corners: UIRectCorner, radius: Double) {

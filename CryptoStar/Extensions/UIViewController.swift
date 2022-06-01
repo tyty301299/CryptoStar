@@ -8,6 +8,10 @@
 import UIKit
 
 extension UIViewController {
+    var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
     func pushViewController<T: UIViewController>(_ viewController: T) {
         navigationController?.pushViewController(viewController, animated: true)
     }
