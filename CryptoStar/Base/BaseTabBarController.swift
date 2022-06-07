@@ -7,102 +7,108 @@
 
 import UIKit
 
-class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-    var customTabBarView = CustomTabBarView()
-    var navigationBarView = TitleTabBarView()
-    var tabBarViewController = [HomeViewController(), ChartsViewController(), SettingViewController()]
-
+class BaseTabBarController: UITabBarController {
+    var customTabBarView = UIView()
+    private var homeItem = ItemTabBarView(with: .home, index: 0)
+    private var chartItem = ItemTabBarView(with: .chart, index: 1)
+    private var settingItem = ItemTabBarView(with: .setting, index: 2)
     override func viewDidLoad() {
         tabBar.isHidden = true
-        delegate = self
-       
+        customTabBarView.backgroundColor = .white
+        let Items = [homeItem, chartItem, settingItem]
+        let TabBarviewControllers = [homeItem.item.viewController, chartItem.item.viewController, settingItem.item.viewController]
+        viewControllers = TabBarviewControllers
         view.addSubview(customTabBarView)
-        view.addSubview(navigationBarView)
-        
-        viewControllers = tabBarViewController
-       
-        navigationBarView.navigationbarSelectIndex(type: .home)
-
-        customTabBarView.setupUI()
-        customTabBarView.tabbarSelectIndex(type: .home)
-
-        let taphome = UITapGestureRecognizer(target: self, action: #selector(wasTappedHome(_:)))
-        taphome.numberOfTapsRequired = 1
-        taphome.numberOfTouchesRequired = 1
-        customTabBarView.homeView.addGestureRecognizer(taphome)
-        customTabBarView.homeView.isUserInteractionEnabled = true
-
-        let tapcharts = UITapGestureRecognizer(target: self, action: #selector(wasTappedCharts(_:)))
-        tapcharts.numberOfTapsRequired = 1
-        tapcharts.numberOfTouchesRequired = 1
-        customTabBarView.chartsView.addGestureRecognizer(tapcharts)
-        customTabBarView.chartsView.isUserInteractionEnabled = true
-
-        let tapsetting = UITapGestureRecognizer(target: self, action: #selector(wasTappedSetting(_:)))
-        tapsetting.numberOfTapsRequired = 1
-        tapsetting.numberOfTouchesRequired = 1
-
-        customTabBarView.settingView.addGestureRecognizer(tapsetting)
-        customTabBarView.settingView.isUserInteractionEnabled = true
+        Items.forEach {
+            view.addSubview($0)
+        }
+        homeItem.isSelected = true
+        setupAnimationItemView(index: homeItem.item)
+        bind()
+      
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         customLayoutTabBar()
-        customLayoutNavigationBar()
-        navigationBarView.setupLayout()
-
-        customTabBarView.cornerView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
-        customTabBarView.shadowView.shadow(offset: CGSize(width: 0, height: -2), cornerRadius: 10)
-
-        navigationBarView.cornerView.roundCorners(corners: [.bottomLeft, .bottomRight],
-                                                  radius: 10)
-        navigationBarView.shadowView.shadow(offset: CGSize(width: 0, height: 2), cornerRadius: 10)
-    }
-    
-    @objc func tapHandler(_ gesture: UITapGestureRecognizer) {
-        
+        customTabBarView.roundCorners(corners: [.topLeft,.topRight], radius: 10)
     }
 
-    @objc func wasTappedHome(_ gesture: UITapGestureRecognizer) {
-        selectedIndex = 0
-        navigationBarView.navigationbarSelectIndex(type: .home)
-        customTabBarView.tabbarSelectIndex(type: .home)
+    func setupAnimationItemView(index: TabItem) {
+        switch index {
+        case .home:
+            homeItem.isSelected = true
+            chartItem.isSelected = false
+            settingItem.isSelected = false
+            selectedIndex = 0
+        case .chart:
+            homeItem.isSelected = false
+            chartItem.isSelected = true
+            settingItem.isSelected = false
+            selectedIndex = 1
+        case .setting:
+            homeItem.isSelected = false
+            chartItem.isSelected = false
+            settingItem.isSelected = true
+            selectedIndex = 2
+        }
     }
 
-    @objc func wasTappedCharts(_ gesture: UITapGestureRecognizer) {
-        selectedIndex = 1
-        navigationBarView.navigationbarSelectIndex(type: .chart)
-        customTabBarView.tabbarSelectIndex(type: .chart)
+    func bind() {
+        let tapHome = UITapGestureRecognizer(target: self, action: #selector(handdingTapTabBarMenu(sender:)))
+        let tapChart = UITapGestureRecognizer(target: self, action: #selector(handdingTapTabBarMenu(sender:)))
+        let tapSetting = UITapGestureRecognizer(target: self, action: #selector(handdingTapTabBarMenu(sender:)))
+        homeItem.addGestureRecognizer(tapHome)
+        chartItem.addGestureRecognizer(tapChart)
+        settingItem.addGestureRecognizer(tapSetting)
     }
 
-    @objc func wasTappedSetting(_ gesture: UITapGestureRecognizer) {
-        selectedIndex = 2
-        navigationBarView.navigationbarSelectIndex(type: .setting)
-        customTabBarView.tabbarSelectIndex(type: .setting)
+    @objc func handdingTapTabBarMenu(sender: UITapGestureRecognizer) {
+        guard let view = sender.view as? ItemTabBarView else { return }
+        setupAnimationItemView(index: view.item)
     }
 
     func customLayoutTabBar() {
         customTabBarView.translatesAutoresizingMaskIntoConstraints = false
+
         let constaints = [
             customTabBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             customTabBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             customTabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-            customTabBarView.heightAnchor.constraint(equalToConstant: 80.scaleH),
+            customTabBarView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 80 / 812),
         ]
-
         NSLayoutConstraint.activate(constaints)
-    }
 
-    func customLayoutNavigationBar() {
-        navigationBarView.translatesAutoresizingMaskIntoConstraints = false
-        let constaints = [
-            navigationBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            navigationBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            navigationBarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            navigationBarView.heightAnchor.constraint(equalToConstant: 125.scaleH),
+       
+
+        homeItem.translatesAutoresizingMaskIntoConstraints = false
+        let constaintshomeItem = [
+            homeItem.leadingAnchor.constraint(equalTo: customTabBarView.leadingAnchor, constant: 43.scaleW),
+
+            homeItem.bottomAnchor.constraint(equalTo: customTabBarView.bottomAnchor, constant: -27.scaleH),
+            homeItem.heightAnchor.constraint(equalToConstant: 33.scaleH),
+            homeItem.widthAnchor.constraint(equalToConstant: 28.scaleW),
         ]
+        NSLayoutConstraint.activate(constaintshomeItem)
 
-        NSLayoutConstraint.activate(constaints)
+
+        chartItem.translatesAutoresizingMaskIntoConstraints = false
+        let constaintschartItem = [
+            chartItem.centerXAnchor.constraint(equalTo: customTabBarView.centerXAnchor),
+            chartItem.bottomAnchor.constraint(equalTo: customTabBarView.bottomAnchor, constant: -27.scaleH),
+            chartItem.heightAnchor.constraint(equalToConstant: 33.scaleH),
+            chartItem.widthAnchor.constraint(equalToConstant: 28.scaleW),
+        ]
+        NSLayoutConstraint.activate(constaintschartItem)
+
+        settingItem.translatesAutoresizingMaskIntoConstraints = false
+        let constaintsfavoriteItem = [
+            settingItem.trailingAnchor.constraint(equalTo: customTabBarView.trailingAnchor, constant: -43.scaleW),
+
+            settingItem.bottomAnchor.constraint(equalTo: customTabBarView.bottomAnchor, constant: -27.scaleH),
+            settingItem.heightAnchor.constraint(equalToConstant: 33.scaleH),
+            settingItem.widthAnchor.constraint(equalToConstant: 28.scaleW),
+        ]
+        NSLayoutConstraint.activate(constaintsfavoriteItem)
     }
 }

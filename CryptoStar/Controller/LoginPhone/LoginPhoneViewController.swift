@@ -54,7 +54,7 @@ class LoginPhoneViewController: BaseViewController {
                     }
                     break
                 case let .failure(error):
-                    print(error)
+                    self?.showAlert(title: "ERROR", message: error.localizedDescription)
                 }
             }
         }

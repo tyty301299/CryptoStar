@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>695486422152-2ouaeiup7vmu7q32pdocm1b5eqvgrif3.apps.googleusercontent.com</string>
+	<string>695486422152-ed7jmj55m7v9c9bdkeibpdfeahssaokl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.695486422152-2ouaeiup7vmu7q32pdocm1b5eqvgrif3</string>
+	<string>com.googleusercontent.apps.695486422152-ed7jmj55m7v9c9bdkeibpdfeahssaokl</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDvK3bNRtMYUIMFx_C0Lqjk9ascl61x5R4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ty-nguyen.CryptoStar</string>
+	<string>com.tomosia.internship</string>
 	<key>PROJECT_ID</key>
 	<string>cryptostar-25b8b</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:695486422152:ios:64ccc4f652ecea3b98933d</string>
+	<string>1:695486422152:ios:79095da4738559ee98933d</string>
 </dict>
 </plist>
