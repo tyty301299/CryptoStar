@@ -13,7 +13,6 @@ class HomeViewController: BaseViewController {
     @IBOutlet private var coinPriceTableView: UITableView!
 
     @IBOutlet private var bottomCoinPriceTableViewLC: NSLayoutConstraint!
-
     private let limit = 10
     private var start = 1
     private var isLoading = false
@@ -81,10 +80,10 @@ class HomeViewController: BaseViewController {
                     if let errorMessage = response.status.errorMessage {
                         self.showAlert(title: .errorMessage, message: errorMessage)
                     } else {
-                        guard let data = response.data else{
+                        guard let data = response.data else {
                             return
                         }
-                       
+
                         DispatchQueue.main.async {
                             self.coins.append(contentsOf: data)
                             self.getLogo(coins: data)
@@ -118,7 +117,6 @@ class HomeViewController: BaseViewController {
                 }
             }
         }
-        
     }
 
     func setTimerDelayAPI(timer: Double) {

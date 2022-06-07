@@ -6,6 +6,8 @@
 //
 
 import CoreData
+import Firebase
+import FirebaseAuth
 import FirebaseCore
 import UIKit
 @main
@@ -55,8 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         self?.setTabBarViewController()
                     case let .failure(error):
                         // Crash app
-                        self?.inputViewController?.showAlert(title: .errorTextField,
-                                                             message: error.localizedDescription)
+                        self?.inputViewController?.showAlert(title: .errorTextField, message: error.localizedDescription)
                     }
                 }
                 return true
@@ -98,6 +99,7 @@ extension AppDelegate {
     func setWelcomeViewController() {
         let mainVC = WelcomeViewController()
         let nav = BaseNavigationController(rootViewController: mainVC)
+
         window?.rootViewController = nav
     }
 

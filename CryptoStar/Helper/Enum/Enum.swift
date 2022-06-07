@@ -5,7 +5,32 @@
 //  Created by Nguyen Ty on 19/05/2022.
 //
 
-import Foundation
+import UIKit
+
+enum StatusCoin: String, CaseIterable {
+    case up
+    case down
+}
+
+extension StatusCoin {
+    var iconImage: UIImage {
+        switch self {
+        case .up:
+            return UIImage(named: "upCoin")!
+        case .down:
+            return UIImage(named: "downCoin")!
+        }
+    }
+
+    var textColor: UIColor {
+        switch self {
+        case .up:
+            return UIColor.hexStringUIColor(color: .cryptoUpColor)
+        case .down:
+            return UIColor.hexStringUIColor(color: .cryptoDownColor)
+        }
+    }
+}
 
 enum Color: String, CaseIterable {
     case backgroundColorButton = "141A22"
@@ -78,16 +103,6 @@ enum TitleLabel: String, CaseIterable, TitleProtocol {
 }
 
 enum TabbarType: Int {
-<<<<<<< Updated upstream
-    case home = 0
-    case chart = 1
-    case setting = 2
-}
-
-enum ClosureResult<String> {
-    case success(data: String)
-    case failure(error: Error)
-=======
     case home
     case chart
     case setting
@@ -247,5 +262,5 @@ extension Dictionary where Key == String, Value == Any {
     func dictionaryToURLItem() -> [URLQueryItem] {
         return map { URLQueryItem(name: $0, value: String(describing: $1)) }
     }
->>>>>>> Stashed changes
 }
+

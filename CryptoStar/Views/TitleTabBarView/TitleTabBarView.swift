@@ -29,10 +29,11 @@ class TitleTabBarView: BaseNibView {
         setupLayoutView()
     }
 
-     func setupTilteLabel(type: TabbarType) {
+    func setupTilteLabel(type: TabbarType) {
         titleLabel.textColor = .black
         titleLabel.font = .sfProDisplay(font: .regular, size: 18)
         isHiddenAddButton(type: type)
+
         switch type {
         case .home:
             titleLabel.setTitle(TitleNavigationBar.home)

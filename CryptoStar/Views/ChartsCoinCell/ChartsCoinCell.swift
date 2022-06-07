@@ -14,7 +14,6 @@ class ChartsCoinCell: UITableViewCell {
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var nameCoinLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-
     @IBOutlet var leadingNameCoinLabelLC: NSLayoutConstraint!
 
     @IBOutlet var trailingPriceLabelLC: NSLayoutConstraint!

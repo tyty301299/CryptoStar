@@ -26,3 +26,4 @@ class BaseNavigationController: UINavigationController {
         navigationController?.navigationBar.titleTextAttributes = attrs
     }
 }
+

@@ -14,12 +14,8 @@ class AuthManager {
     
     private let auth = Auth.auth()
     private var verificationID: String?
-<<<<<<< Updated upstream:CryptoStar/Model/AuthManager.swift
-    public func startAuth(phoneNumber: String, completion: @escaping (ClosureResult<String>) -> Void) {
-=======
     
     func startAuth(phoneNumber: String, completion: @escaping (ClosureResult<String>) -> Void) {
->>>>>>> Stashed changes:CryptoStar/Model/AuthManager/AuthManager.swift
         PhoneAuthProvider.provider()
             .verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
                 if let error = error {
@@ -56,7 +52,6 @@ class AuthManager {
                 completion(.failure(error: error))
                 return
             }
-
             completion(.success(data: "success"))
         }
     }
@@ -71,8 +66,6 @@ class AuthManager {
             completion(.success(data: "success"))
         }
     }
-<<<<<<< Updated upstream:CryptoStar/Model/AuthManager.swift
-=======
     
     func signInEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
         let actionCodeSettings = ActionCodeSettings()
@@ -91,5 +84,5 @@ class AuthManager {
             completion(.success(data: "success"))
         }
     }
->>>>>>> Stashed changes:CryptoStar/Model/AuthManager/AuthManager.swift
 }
+

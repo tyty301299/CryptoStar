@@ -66,3 +66,4 @@ extension SettingViewController: UITableViewDataSource {
         return cell
     }
 }
+

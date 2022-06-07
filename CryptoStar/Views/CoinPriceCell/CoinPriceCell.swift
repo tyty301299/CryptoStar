@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 protocol CoinPriceCellDelegate: AnyObject {
     func coinSwitchChanged(sender: CoinPriceCell, onSwitch: Bool)
 }
@@ -97,6 +98,7 @@ class CoinPriceCell: UITableViewCell {
         symbolLabel.text = coin.symbol
         priceUSDLabel.text = coin.priceUSD
         setPercentChange(price: coin.quote.USD.percentChange24H)
+
         setChartSwitch()
         if let logoUrl = coin.logo {
             iconImageView?.load(link: logoUrl)

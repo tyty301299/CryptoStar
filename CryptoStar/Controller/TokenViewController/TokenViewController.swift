@@ -24,7 +24,7 @@ class TokenViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         getDataFromAPI()
         getAllCoreData()
         setupTableView()
@@ -90,10 +90,11 @@ class TokenViewController: BaseViewController {
             }
         }
     }
+
     func updateDataLogo(coin: Coin) {
         CoreDataManager.updateLogo(coin: coin) { (result: ClosureResult<String>) in
             switch result {
-            case .success(_):
+            case .success:
                 break
             case let .failure(error):
                 self.showAlert(title: .errorUpdateCoreData,
@@ -105,17 +106,18 @@ class TokenViewController: BaseViewController {
     func getDataFromAPI() {
         if !isLoading {
             isLoading = true
-
+            start = coinEntities.count + 1
             API.request(dataAPI: APICoin.getCoin(start: start, limit: limit)) { (result: ClosureResultCoin<CoinResponse>) in
                 switch result {
                 case let .success(response):
                     guard let data = response.data else {
                         return
                     }
+                    self.coins.removeAll()
                     self.coins.append(contentsOf: data)
                     self.saveContext(coin: data)
                     self.getLogo(coins: data)
-                    
+
                 case let .failure(error):
                     self.showAlert(title: .errorTextField, message: error.localizedDescription)
                 case let .disconnected(data):
@@ -181,9 +183,9 @@ extension TokenViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("Loading more : \(coins.count)")
-        if coins.count - 1 == indexPath.row && !isLoading {
-            start = coins.count + 1
+        print("Loading more : \(coinEntities.count)")
+        if coinEntities.count - 1 == indexPath.row && !isLoading {
+           
             getDataFromAPI()
         }
     }

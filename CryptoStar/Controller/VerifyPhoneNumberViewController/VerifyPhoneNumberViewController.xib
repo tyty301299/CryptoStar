@@ -38,7 +38,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oty-Ne-fFm">
                     <rect key="frame" x="54.5" y="1268" width="915" height="78"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
                         <action selector="actionLoginSMSPhone:" destination="-1" eventType="touchUpInside" id="6mZ-c8-08m"/>
                     </connections>

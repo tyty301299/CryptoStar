@@ -40,13 +40,15 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
         bottomLoginButtonLC.constant = 20.scaleW
         bottomLoginNowViewLC.constant = 64.scaleW
     }
-    func setupActivityIndicatorView(){
-        activityIndicator.center = self.view.center
+
+    func setupActivityIndicatorView() {
+        activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .large
         activityIndicator.color = UIColor.red
         view.addSubview(activityIndicator)
     }
+
     func setupLabels() {
         dontHaveAnAccountLabel.font = .sfProDisplay(font: .regular, size: 18)
         signUpLabel.font = .sfProDisplay(font: .regular, size: 18)
@@ -116,6 +118,6 @@ extension LoginEmailViewController: UITextFieldDelegate {
             return count <= Limit.email
         }
 
-        return count <= Limit.Password
+        return count <= Limit.password
     }
 }

@@ -9,12 +9,12 @@ import CoreData
 import UIKit
 
 class ChartsViewController: BaseViewController {
-    @IBOutlet private weak var chartCoinTableView: UITableView!
-    @IBOutlet private weak var navigationBarView: TitleTabBarView!
-    
+    @IBOutlet private var chartCoinTableView: UITableView!
+    @IBOutlet private var navigationBarView: TitleTabBarView!
+
     private var coinChartEntities = [CoinEntity]()
     private let context = AppDelegate.shared.persistentContainer.viewContext
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +28,8 @@ class ChartsViewController: BaseViewController {
             tabbarController.tabBarView.isHidden = false
         }
         getSelectedDataCoreData()
-       
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         navigationBarView.setupLayoutView()
@@ -58,8 +57,8 @@ class ChartsViewController: BaseViewController {
         chartCoinTableView.separatorStyle = .none
         chartCoinTableView.register(aClass: ChartsCoinCell.self)
     }
-    
-    func setupNavigationBarView(){
+
+    func setupNavigationBarView() {
         navigationBarView.setupTilteLabel(type: .chart)
         navigationBarView.navigationBarSelectIndex(type: .chart)
         navigationBarView.addButton.addTarget(self,

@@ -39,8 +39,9 @@ class CreateAccountViewController: BaseViewController {
         yourNameView.createLayerLineTextField()
         confirmPasswordView.createLayerLineTextField()
     }
-    func setupActivityIndicatorView(){
-        activityIndicator.center = self.view.center
+
+    func setupActivityIndicatorView() {
+        activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.style = .large
         activityIndicator.color = UIColor.red
@@ -155,6 +156,6 @@ extension CreateAccountViewController: UITextFieldDelegate {
             return count <= Limit.email
         }
 
-        return count <= Limit.Password
+        return count <= Limit.password
     }
 }
