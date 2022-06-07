@@ -7,19 +7,18 @@
 
 import UIKit
 
-<<<<<<< Updated upstream
 class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
     var customTabBarView = CustomTabBarView()
     var navigationBarView = TitleTabBarView()
     var tabBarViewController = [HomeViewController(), ChartsViewController(), SettingViewController()]
-=======
+
 class BaseTabBarController: UITabBarController {
     var tabBarView = UIView()
 
     private var homeItem = ItemTabBarView(with: .home, index: 0)
     private var chartItem = ItemTabBarView(with: .chart, index: 1)
     private var settingItem = ItemTabBarView(with: .setting, index: 2)
->>>>>>> Stashed changes
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,6 @@ class BaseTabBarController: UITabBarController {
 
     func setupViews() {
         tabBar.isHidden = true
-<<<<<<< Updated upstream
         delegate = self
        
         view.addSubview(customTabBarView)
@@ -62,7 +60,7 @@ class BaseTabBarController: UITabBarController {
 
         customTabBarView.settingView.addGestureRecognizer(tapsetting)
         customTabBarView.settingView.isUserInteractionEnabled = true
-=======
+
         tabBarView.backgroundColor = .white
         let tabbarItems = [homeItem, chartItem, settingItem]
         viewControllers = tabbarItems.map({ $0.item.viewController })
@@ -71,12 +69,11 @@ class BaseTabBarController: UITabBarController {
         tabbarItems.forEach {
             tabBarView.addSubview($0)
         }
->>>>>>> Stashed changes
+
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-<<<<<<< Updated upstream
         customLayoutTabBar()
         customLayoutNavigationBar()
         navigationBarView.setupLayout()
@@ -133,7 +130,7 @@ class BaseTabBarController: UITabBarController {
         ]
 
         NSLayoutConstraint.activate(constaints)
-=======
+
         setupLayoutTabBar()
         tabBarView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
     }
@@ -215,6 +212,6 @@ class BaseTabBarController: UITabBarController {
             // settingItem.widthAnchor.constraint(equalToConstant: 28.scaleW),
         ]
         NSLayoutConstraint.activate(constaintsfavoriteItem)
->>>>>>> Stashed changes
+
     }
 }

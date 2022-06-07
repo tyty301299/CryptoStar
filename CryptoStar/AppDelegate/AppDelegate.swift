@@ -24,22 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func configRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-<<<<<<< Updated upstream
         let mainVC = WelcomeViewController()
         let nav = BaseNavigationController(rootViewController: mainVC)
         window?.rootViewController = nav
-=======
         if Auth.auth().currentUser != nil {
             setTabBarViewController()
         } else {
             setWelcomeViewController()
         }
->>>>>>> Stashed changes
+
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
     }
-<<<<<<< Updated upstream
-=======
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
@@ -58,10 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case .success:
                         self?.setTabBarViewController()
                     case let .failure(error):
-                        //Crash app
+                        // Crash app
                         self?.inputViewController?.showAlert(title: .errorTextField,
-                                                             message:error.localizedDescription)
-
+                                                             message: error.localizedDescription)
                     }
                 }
                 return true
@@ -92,9 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 try context.save()
             } catch {
                 let error = error as NSError
-                self.inputViewController?.showAlert(title: .errorCoreData,
-                                                    message: "\(error.userInfo)")
-              
+                inputViewController?.showAlert(title: .errorCoreData,
+                                               message: "\(error.userInfo)")
             }
         }
     }
@@ -110,5 +104,4 @@ extension AppDelegate {
     func setTabBarViewController() {
         window?.rootViewController = BaseTabBarController()
     }
->>>>>>> Stashed changes
 }
