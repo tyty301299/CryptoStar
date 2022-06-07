@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CryptoStar" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="mTF-bp-jdC" id="anP-hx-9v2"/>
+                <outlet property="bottomCoinPriceTableViewLC" destination="KYz-3f-ySG" id="A9c-f8-B11"/>
+                <outlet property="coinPriceTableView" destination="nUr-4W-TM6" id="B1f-kc-FZx"/>
+                <outlet property="navigationBarView" destination="m0H-H8-WZB" id="rBh-XX-mtG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0H-H8-WZB" customClass="TitleTabBarView" customModule="CryptoStar" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nUr-4W-TM6">
+                    <rect key="frame" x="0.0" y="138" width="414" height="678"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mTF-bp-jdC">
+                    <rect key="frame" x="197" y="762" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="099-D3-8PK"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="099-D3-8PK" firstAttribute="bottom" secondItem="mTF-bp-jdC" secondAttribute="bottom" constant="80" id="0pO-TY-1Iv"/>
+                <constraint firstItem="m0H-H8-WZB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="125/812" id="3TM-0v-uTM"/>
+                <constraint firstItem="m0H-H8-WZB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="G4q-p3-Zrn"/>
+                <constraint firstAttribute="bottom" secondItem="nUr-4W-TM6" secondAttribute="bottom" constant="80" id="KYz-3f-ySG"/>
+                <constraint firstItem="099-D3-8PK" firstAttribute="trailing" secondItem="nUr-4W-TM6" secondAttribute="trailing" id="WhM-mc-ZlG"/>
+                <constraint firstItem="nUr-4W-TM6" firstAttribute="leading" secondItem="099-D3-8PK" secondAttribute="leading" id="Xx2-xS-vCf"/>
+                <constraint firstItem="nUr-4W-TM6" firstAttribute="top" secondItem="m0H-H8-WZB" secondAttribute="bottom" id="fax-yN-hY9"/>
+                <constraint firstItem="m0H-H8-WZB" firstAttribute="leading" secondItem="099-D3-8PK" secondAttribute="leading" id="hHp-hg-cPF"/>
+                <constraint firstItem="099-D3-8PK" firstAttribute="trailing" secondItem="m0H-H8-WZB" secondAttribute="trailing" id="riE-5S-fSD"/>
+                <constraint firstItem="mTF-bp-jdC" firstAttribute="centerX" secondItem="099-D3-8PK" secondAttribute="centerX" id="ueh-xS-Lvh"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

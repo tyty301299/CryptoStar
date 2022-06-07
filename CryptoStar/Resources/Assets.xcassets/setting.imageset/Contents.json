@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Shape1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,10 @@
       "scale" : "2x"
     },
     {
+<<<<<<< Updated upstream
       "filename" : "setting.png",
+=======
+>>>>>>> Stashed changes
       "idiom" : "universal",
       "scale" : "3x"
     }

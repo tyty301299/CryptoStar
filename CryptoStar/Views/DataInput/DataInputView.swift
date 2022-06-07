@@ -10,8 +10,7 @@ import UIKit
 class DataInputView: BaseNibView {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dataInputTextField: UITextField!
-    
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         createLayerLineTextField()
@@ -27,6 +26,9 @@ class DataInputView: BaseNibView {
         dataInputTextField.keyboardType = keyboardType
         dataInputTextField.isSecureTextEntry = secureTextEntry
         dataInputTextField.font = .sfProDisplay(font: .regular, size: 18)
+        if secureTextEntry == true {
+            dataInputTextField.textContentType = .oneTimeCode
+        }
     }
 
     func createLayerLineTextField() {

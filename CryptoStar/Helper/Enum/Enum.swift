@@ -38,8 +38,24 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
     case charts = "Charts"
     case setting = "Setting"
     case login = "Login"
+    case token = "Token"
     case notificationTitleCreateAccount = "Sync across devices with your Account"
+    case securePIN = "Secure your portfolio with a PIN"
     case cretateAccountButton = "Create Account"
+    case createPIN = "Create PIN"
+    case createPINButton = "Create a Secured PIN"
+    case isEmptyData = ""
+    func getTitle() -> String {
+        return rawValue
+    }
+}
+
+enum entityData: String, CaseIterable, TitleProtocol {
+    case coinEntity = "CoinEntity"
+    case id = "id"
+    case logo = "logo"
+    case checkSwitch = "checkSwitch"
+
     func getTitle() -> String {
         return rawValue
     }
@@ -48,7 +64,7 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
 enum TitleLabel: String, CaseIterable, TitleProtocol {
     case yourName = "YOUR NAME"
     case emailID = "EMAIL ID"
-    case passWord = "PASSWORD"
+    case password = "PASSWORD"
     case confirmPassWord = "CONFIRM PASSWORD"
     case phoneNumber = "Phone Number"
     case resend = "Resend"
@@ -62,6 +78,7 @@ enum TitleLabel: String, CaseIterable, TitleProtocol {
 }
 
 enum TabbarType: Int {
+<<<<<<< Updated upstream
     case home = 0
     case chart = 1
     case setting = 2
@@ -70,4 +87,165 @@ enum TabbarType: Int {
 enum ClosureResult<String> {
     case success(data: String)
     case failure(error: Error)
+=======
+    case home
+    case chart
+    case setting
+}
+
+enum ClosureResult<T: Codable> {
+    case success(data: T)
+    case failure(error: Error)
+}
+
+enum TabItem: String, CaseIterable {
+    case home = "Home"
+    case chart = "Charts"
+    case setting = "Setting"
+}
+
+extension TabItem {
+    var viewController: UINavigationController {
+        switch self {
+        case .home:
+            return BaseNavigationController(rootViewController: HomeViewController())
+        case .chart:
+            return BaseNavigationController(rootViewController: ChartsViewController())
+
+        case .setting:
+            return BaseNavigationController(rootViewController: SettingViewController())
+        }
+    }
+
+    var icon: UIImage {
+        switch self {
+        case .home:
+            return UIImage(named: "home")!
+        case .chart:
+            return UIImage(named: "charts")!
+        case .setting:
+            return UIImage(named: "setting")!
+        }
+    }
+
+    var selectedIcon: UIImage? {
+        switch self {
+        case .home:
+            return UIImage(named: "homeIphone")!
+        case .chart:
+            return UIImage(named: "chartsIphone")!
+        case .setting:
+            return UIImage(named: "settingIphone")!
+        }
+    }
+
+    var displayTitle: String {
+        return rawValue.capitalized(with: nil)
+    }
+}
+
+enum HTTPMethod: String {
+    case GET = "GET"
+    case POST = "POST"
+}
+
+enum APICoin {
+    case getLogo(id: Int)
+    case getCoin(start: Int, limit: Int)
+    case postCoin(start: Int, limit: Int)
+    static let endPoint = "https://pro-api.coinmarketcap.com"
+    static let version = "v1/"
+    static let version2 = "v2/"
+    var method: HTTPMethod {
+        switch self {
+        case .getCoin:
+            return HTTPMethod.GET
+        case .postCoin:
+            return HTTPMethod.POST
+        case .getLogo:
+            return HTTPMethod.GET
+        }
+    }
+
+    var id: String {
+        switch self {
+        case let .getLogo(id):
+            return "\(id)"
+        case let .getCoin(start, _):
+            return "\(start)"
+        case let .postCoin(start, _):
+            return "\(start)"
+        }
+    }
+
+    var parameter: [String: Any]? {
+        switch self {
+        case let .getCoin(start, limit):
+            return ["start": start, "limit": limit]
+        case let .postCoin(start, limit):
+            return ["start": start, "limit": limit]
+        case let .getLogo(id):
+            return ["id": id]
+        }
+    }
+
+    var header: [String: String] {
+        return ["X-CMC_PRO_API_KEY": "611d30ac-f7f7-4253-a860-f731e4a782d7"]
+    }
+
+    var url: String? {
+        switch self {
+        case .getCoin:
+            return APICoin.endPoint + "/" + APICoin.version + "cryptocurrency/listings/latest"
+        case .postCoin:
+            return APICoin.endPoint + "/" + APICoin.version + "cryptocurrency/listings/latest"
+        case .getLogo:
+            return APICoin.endPoint + "/" + APICoin.version2 + "cryptocurrency/info"
+        }
+    }
+}
+
+enum ClosureResultCoin<T: Codable> {
+    case success(data: T)
+    case failure(error: Error)
+    case disconnected(data: String)
+}
+
+enum ClosureResultCoreData {
+    case success(data: [CoinEntity])
+    case failure(error: Error)
+    case disconnected(data: String)
+}
+
+enum ClosureResultLogo {
+    case success(data: String)
+    case failure(error: Error)
+    case disconnected(data: String)
+}
+
+enum DataTextField: String , CaseIterable {
+    case empty = "Empty"
+    case textFieldEmpty = "TextField Empty"
+    case email = "Email"
+    case emailIsNot = "Email Is Not"
+    case errorTextField = "Error"
+    case logo = "Disconnect Logo"
+    case password = "Password"
+    case wrongPassword = "wrong password"
+    case success = "Success"
+    case disconnected = "disconnected"
+    case errorUpdateCoreData = "Error Update Core Data"
+    case errorCoreData = "Core Data"
+    case errorMessage = "Error Message"
+    func getTitle() -> String {
+        return rawValue
+    }
+    
+}
+
+extension Dictionary where Key == String, Value == Any {
+    func dictionaryToURLItem() -> [URLQueryItem] {
+        return map { URLQueryItem(name: $0, value: String(describing: $1)) }
+    }
+>>>>>>> Stashed changes
 }

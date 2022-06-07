@@ -20,4 +20,11 @@ extension UIButton {
         backgroundColor = background
         setFontButton(title: text, textColor: textColor)
     }
+
+    func setFontButton(text: String, textColor: UIColor, size: Double, font: Font) {
+        let text = NSMutableAttributedString(string: text)
+        text.addAttributes([.font: UIFont.sfProDisplay(font: Font.regular, size: size.scaleW), .foregroundColor: textColor], range: NSRange(location: 0, length: text.length))
+        setAttributedTitle(text, for: .normal)
+    }
+
 }

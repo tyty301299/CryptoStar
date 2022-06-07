@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Group-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,10 @@
       "scale" : "2x"
     },
     {
+<<<<<<< Updated upstream:CryptoStar/Resources/Assets.xcassets/charts_iphone.imageset/Contents.json
       "filename" : "charts_iphone.png",
+=======
+>>>>>>> Stashed changes:CryptoStar/Resources/Assets.xcassets/homeIphone.imageset/Contents.json
       "idiom" : "universal",
       "scale" : "3x"
     }

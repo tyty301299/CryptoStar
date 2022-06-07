@@ -11,26 +11,34 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("[HOT] \(className) init")
+<<<<<<< Updated upstream
         
         let originFrame = self.view.frame
         dump(originFrame, name: "[ORIGIN_FRAME]")
         self.view.frame = CGRect(x: originFrame.minX, y: -125, width: originFrame.width, height: originFrame.height)
+=======
+>>>>>>> Stashed changes
     }
 
     deinit {
         print("[HOT] \(self.className) deinit")
     }
 
-    func backViewController() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "backImage"),
-            style: .done,
-            target: self,
-            action: #selector(backButtonPressed)
-        )
+    func setupNavigationBarView(navigationBarView: CustomNavigationBarView,
+                                title: TitleNavigationBar,
+                                notificationTitle: TitleNavigationBar = .isEmptyData) {
+
+        navigationBarView.setupNavigationBarButton()
+        navigationBarView.setupStyleNavigaitonBarLabel()
+        navigationBarView.titleLabel.setTitle(title)
+        navigationBarView.notificationLabel.isHidden = false
+        navigationBarView.notificationLabel.setTitle(notificationTitle)
+        navigationBarView.backButton.addTarget(self,
+                                               action: #selector(actionBackViewController),
+                                               for: .touchUpInside)
     }
 
-    @objc func backButtonPressed() {
+    @objc func actionBackViewController() {
         popViewController()
     }
 

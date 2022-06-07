@@ -16,3 +16,13 @@ extension UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
+
+// MARK: - Alert
+
+extension UIViewController {
+    func showAlert(title: DataTextField, message: String) {
+        let alert = UIAlertController(title: title.getTitle(), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
