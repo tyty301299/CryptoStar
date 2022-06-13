@@ -10,27 +10,46 @@ import UIKit
 class TitleTabBarView: BaseNibView {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var addButton: UIButton!
-    @IBOutlet var bottomAddButtonLC: NSLayoutConstraint!
-    @IBOutlet var bottomTitleLabelLC: NSLayoutConstraint!
     @IBOutlet var trailingAddButtonLC: NSLayoutConstraint!
     @IBOutlet var leadingTitleLabelLC: NSLayoutConstraint!
+    @IBOutlet var bottomTitleLabelLC: NSLayoutConstraint!
+    override func setNeedsLayout() {
+        super.setNeedsLayout()
+        setupLayoutView()
+    }
 
-    func setupLayout() {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    func setupLayoutView() {
         trailingAddButtonLC.constant = 30.scaleW
         leadingTitleLabelLC.constant = 30.scaleW
-        bottomAddButtonLC.constant = 30.scaleH
-        bottomTitleLabelLC.constant = 33.scaleH
-        roundCorners(corners: [.bottomRight, .bottomLeft], radius: 20)
+        bottomTitleLabelLC.constant = 30.scaleW
+    }
+
+    override func initView() {
+        super.initView()
+        setupCornerRadius()
+    }
+
+    func setupCornerRadius() {
+        contentView.layer.applyCornerRadiusShadow(color: .black.withAlphaComponent(0.5),
+                                                  alpha: 0.5,
+                                                  x: 0, y: 2,
+                                                  cornerRadiusValue: 10)
     }
 
     func navigationBarSelectIndex(type: TabbarType) {
-        setupTilteLabel(type: type)
+        setupTitleLabel(type: type)
         isHiddenAddButton(type: type)
+       
     }
 
-    private func setupTilteLabel(type: TabbarType) {
+    func setupTitleLabel(type: TabbarType) {
         titleLabel.textColor = .black
         titleLabel.font = .sfProDisplay(font: .regular, size: 18)
+        isHiddenAddButton(type: type)
         switch type {
         case .home:
             titleLabel.setTitle(TitleNavigationBar.home)
@@ -45,6 +64,7 @@ class TitleTabBarView: BaseNibView {
         switch type {
         case .chart:
             addButton.isHidden = false
+
         default:
             addButton.isHidden = true
         }

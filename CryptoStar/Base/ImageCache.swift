@@ -33,3 +33,4 @@ class ImageCache {
         cache.removeAllObjects()
     }
 }
+

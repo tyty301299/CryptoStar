@@ -9,7 +9,7 @@ import UIKit
 
 class BaseNibView: UIView {
     @IBOutlet var contentView: UIView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -20,7 +20,7 @@ class BaseNibView: UIView {
         initView()
     }
 
-    private func initView() {
+    func initView() {
         Bundle.main.loadNibNamed(className, owner: self)
         contentView.frame = bounds
         addSubview(contentView)

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Please all continue with face id</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -9,8 +11,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.695486422152-2ouaeiup7vmu7q32pdocm1b5eqvgrif3</string>
+				<string>com.googleusercontent.apps.695486422152-ed7jmj55m7v9c9bdkeibpdfeahssaokl</string>
 			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array/>
 		</dict>
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>

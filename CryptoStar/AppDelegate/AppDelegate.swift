@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  CryptoStar
@@ -10,56 +11,113 @@ import Firebase
 import FirebaseAuth
 import FirebaseCore
 import UIKit
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as? AppDelegate ?? AppDelegate()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        configRootViewController()
+        return true
+    }
+// MARK: - Screen Root View Controller
+    
+    func configRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        if let email = UserDefaults.standard.value(forKey: "Email") as? String, let passWord = UserDefaults.standard.value(forKey: "Pass") as? String {
-            setTabBarRootViewController()
+        if Auth.auth().currentUser != nil {
+            setTabBarViewController()
         } else {
-            setLoginRootViewController()
+            setWelcomeViewController()
         }
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        FirebaseApp.configure()
-        return true
     }
 
+    // MARK: Verify Email
     func application(_ application: UIApplication, continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        return userActivity.webpageURL.flatMap(handlePasswordlessSignIn)!
+        return userActivity.webpageURL.flatMap(handlePasswordlessSignIn) ?? false
     }
 
     func handlePasswordlessSignIn(withURL url: URL) -> Bool {
         let link = url.absoluteString
         if Auth.auth().isSignIn(withEmailLink: link) {
-            if let email = UserDefaults.standard.value(forKey: "Email") as? String, let passWord = UserDefaults.standard.value(forKey: "Pass") as? String {
-                AuthManager.shared.signUpEmail(email: email, password: passWord.MD5) { result in
+            let email = UserDefaultUtils.email
+            let password = UserDefaultUtils.password
+            if email.isNotEmpty,
+               password.isNotEmpty {
+                AuthManager.shared.signUpEmail(email: email, password: password.MD5) { [weak self] result in
                     switch result {
                     case .success:
-                        self.setTabBarRootViewController()
+                        self?.setTabBarViewController()
                     case let .failure(error):
-                        fatalError(error.localizedDescription)
+                        UIApplication.topViewController()?.showAlert(title: .errorTextField, message: error.localizedDescription)
                     }
                 }
+                return true
             }
-            return true
         }
         return false
     }
+
+    // MARK: - CORE DATA
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "CryptoStar")
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                UIApplication.topViewController()?.showAlert(title: .errorCoreData, message: error.localizedDescription)
+            }
+        }
+        return container
+    }()
+
+    // MARK: - CORE DATA SAVING
+
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let error = error as NSError
+                UIApplication.topViewController()?.showAlert(title: .errorCoreData, message: error.localizedDescription)
+            }
+        }
+    }
+}
+// MARK: USE FUNCTIONS IN VIEWCONTROLLER
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = AppDelegate.shared.window?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
 }
 
+// MARK: - ROOT VIEWCONTROLLER
 extension AppDelegate {
-    func setLoginRootViewController() {
+    func setWelcomeViewController() {
         let mainVC = WelcomeViewController()
         let nav = BaseNavigationController(rootViewController: mainVC)
 
         window?.rootViewController = nav
     }
 
-    func setTabBarRootViewController() {
+    func setTabBarViewController() {
         window?.rootViewController = BaseTabBarController()
     }
 }

@@ -17,4 +17,37 @@ extension String {
     var subString: String {
         return String(format: "%.2f", self)
     }
+
+    var isNotContainsEmail: Bool {
+        let ischaracters = "@"
+        if contains(ischaracters) {
+            return false
+        }
+        return true
+    }
+}
+
+extension Optional where Wrapped == String {
+    var getOrEmpty: String {
+        if self == nil {
+            return ""
+        } else {
+            return self!
+        }
+    }
+}
+
+extension String {
+    var isNotEmpty: Bool {
+        !isEmpty
+    }
+}
+
+extension String {
+    func removingLeadingSpaces() -> String {
+        guard let index = firstIndex(where: { !CharacterSet(charactersIn: String($0)).isSubset(of: .whitespaces) }) else {
+            return self
+        }
+        return String(self[index...])
+    }
 }

@@ -10,10 +10,11 @@ import UIKit
 class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationBar.isTranslucent = true
         navigationBar.isHidden = true
         navigationBar.tintColor = .black
-        self.loadFont()
+        loadFont()
     }
 
     func loadFont() {
@@ -25,3 +26,4 @@ class BaseNavigationController: UINavigationController {
         navigationController?.navigationBar.titleTextAttributes = attrs
     }
 }
+

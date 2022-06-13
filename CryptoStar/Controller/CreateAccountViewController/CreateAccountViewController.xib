@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountViewController" customModule="CryptoStar" customModuleProvider="target">
             <connections>
-                <outlet property="confirmPassWordView" destination="Mft-Yp-4X2" id="ccd-yi-Nxu"/>
+                <outlet property="confirmPasswordView" destination="Mft-Yp-4X2" id="ccd-yi-Nxu"/>
                 <outlet property="createAccountButton" destination="7Po-RX-fzr" id="eu3-Ik-pLD"/>
                 <outlet property="dataInputContainerStackView" destination="kTV-KY-cdp" id="bae-J3-QX1"/>
                 <outlet property="emailView" destination="TyO-LY-Gqp" id="o2S-jT-VZo"/>
                 <outlet property="loginNowLabel" destination="wZm-eb-LED" id="weN-eJ-GHX"/>
                 <outlet property="navigationBarView" destination="6dY-Zh-yvZ" id="OtD-8S-ymk"/>
-                <outlet property="passWordView" destination="Pmq-Oc-2A7" id="sld-Q6-88q"/>
-                <outlet property="topLayoutDataInputContainerStackView" destination="aWZ-Dz-0o7" id="8eq-iK-4lq"/>
+                <outlet property="passwordView" destination="Pmq-Oc-2A7" id="sld-Q6-88q"/>
+                <outlet property="topDataInputContainerStackViewLC" destination="aWZ-Dz-0o7" id="8eq-iK-4lq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yourNameView" destination="cMV-hq-oa9" id="3fK-VS-fPb"/>
             </connections>
@@ -64,7 +63,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
-                        <action selector="createAccountEmail:" destination="-1" eventType="touchUpInside" id="M2D-HJ-3b7"/>
+                        <action selector="createAccount:" destination="-1" eventType="touchUpInside" id="TXi-OF-mKd"/>
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kTV-KY-cdp">

@@ -4,9 +4,16 @@
 //
 //  Created by Nguyen Ty on 29/05/2022.
 //
-
-import Foundation
 import UIKit
+
+struct CoinResponse: Codable {
+    var status: Status
+    var data: [Coin]?
+}
+
+class Status: Codable {
+    var errorMessage: String?
+}
 
 class Coin: Codable {
     var id: Int
@@ -19,6 +26,7 @@ class Coin: Codable {
         }
     }
 
+    var checkSwitch: Bool = false
     var priceUSD: String {
         return "$" + quote.USD.price.convertDoubletoPrice
     }
@@ -42,6 +50,17 @@ struct USD: Codable {
     var percentChange24H: Double
 }
 
-struct CoinResponse: Codable {
-    var data: [Coin]
+struct DataDrawLine {
+    var time: Double
+    var usd: Double
+}
+
+struct CoinEntities {
+    var data: [CoinEntity]
+}
+
+struct Limit {
+    static var email = 256
+    static var password = 8
+    static var numberPhone = 11
 }

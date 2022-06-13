@@ -8,16 +8,16 @@
 import UIKit
 
 class CustomNavigationBarView: BaseNibView {
-    @IBOutlet var leadingBackButtonLC: NSLayoutConstraint!
-    @IBOutlet var notificationLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var backButton: UIButton!
+    @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private var leadingBackButtonLC: NSLayoutConstraint!
 
-    func setUpNavigationBarButton() {
+    func setupNavigationBarButton() {
         leadingBackButtonLC.constant = 25.scaleW
     }
 
-    func setUpStyleNavigaitonBarLabel() {
+    func setupStyleNavigationBarLabel() {
         titleLabel.font = .sfProDisplay(font: .medium, size: 20)
         titleLabel.textColor = .black
         notificationLabel.textColor = .hexStringUIColor(color: .titleColorLabel)

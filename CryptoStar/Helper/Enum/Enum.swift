@@ -63,8 +63,76 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
     case charts = "Charts"
     case setting = "Setting"
     case login = "Login"
+    case loginPin = "Login PIN"
+    case token = "Token"
     case notificationTitleCreateAccount = "Sync across devices with your Account"
+    case securePIN = "Secure your portfolio with a PIN"
     case cretateAccountButton = "Create Account"
+    case createPINButton = "Create PIN"
+    case verifiPINButton = "Verify PIN"
+    case createPIN = "Create a Secured PIN"
+    case verifyPIN = "Verify a Secured PIN"
+    case isEmptyData = ""
+    case privacyAndPolicy = "Privacy And Policy"
+    case aboutUs = "About Us"
+    func getTitle() -> String {
+        return rawValue
+    }
+
+    var url: String {
+        switch self {
+        case .createAccount:
+            fallthrough
+        case .loginPhone:
+            fallthrough
+        case .loginEmail:
+            fallthrough
+        case .verifyPhone:
+            fallthrough
+        case .home:
+            fallthrough
+        case .otp:
+            fallthrough
+        case .charts:
+            fallthrough
+        case .setting:
+            fallthrough
+        case .login:
+            fallthrough
+        case .loginPin:
+            fallthrough
+        case .token:
+            fallthrough
+        case .notificationTitleCreateAccount:
+            fallthrough
+        case .securePIN:
+            fallthrough
+        case .cretateAccountButton:
+            fallthrough
+        case .createPINButton:
+            fallthrough
+        case .verifiPINButton:
+            fallthrough
+        case .createPIN:
+            fallthrough
+        case .verifyPIN:
+            fallthrough
+        case .isEmptyData:
+            return ""
+        case .privacyAndPolicy:
+            return "https://support.apple.com/"
+        case .aboutUs:
+            return "https://www.apple.com/business/"
+        }
+    }
+}
+
+enum entityData: String, CaseIterable, TitleProtocol {
+    case coinEntity = "CoinEntity"
+    case id
+    case logo
+    case checkSwitch
+
     func getTitle() -> String {
         return rawValue
     }
@@ -73,7 +141,7 @@ enum TitleNavigationBar: String, CaseIterable, TitleProtocol {
 enum TitleLabel: String, CaseIterable, TitleProtocol {
     case yourName = "YOUR NAME"
     case emailID = "EMAIL ID"
-    case passWord = "PASSWORD"
+    case password = "PASSWORD"
     case confirmPassWord = "CONFIRM PASSWORD"
     case phoneNumber = "Phone Number"
     case resend = "Resend"
@@ -97,6 +165,11 @@ enum ClosureResult<T: Codable> {
     case failure(error: Error)
 }
 
+enum ClosureResultCoinEntities {
+    case success(data: CoinEntities)
+    case failure(error: Error)
+}
+
 enum TabItem: String, CaseIterable {
     case home = "Home"
     case chart = "Charts"
@@ -104,14 +177,15 @@ enum TabItem: String, CaseIterable {
 }
 
 extension TabItem {
-    var viewController: UIViewController {
+    var viewController: UINavigationController {
         switch self {
         case .home:
-            return HomeViewController()
+            return BaseNavigationController(rootViewController: HomeViewController())
         case .chart:
-            return ChartsViewController()
+            return BaseNavigationController(rootViewController: ChartsViewController())
+
         case .setting:
-            return SettingViewController()
+            return BaseNavigationController(rootViewController: SettingViewController())
         }
     }
 
@@ -188,7 +262,7 @@ enum APICoin {
     }
 
     var header: [String: String] {
-        return ["X-CMC_PRO_API_KEY": "e54f6233-aad1-4965-9928-4d212bae9daa"]
+        return ["X-CMC_PRO_API_KEY": "aa035776-0761-4b56-b796-4c07888ce670"]
     }
 
     var url: String? {
@@ -209,10 +283,36 @@ enum ClosureResultCoin<T: Codable> {
     case disconnected(data: String)
 }
 
+enum ClosureResultCoreData {
+    case success(data: [CoinEntity])
+    case failure(error: Error)
+    case disconnected(data: String)
+}
+
 enum ClosureResultLogo {
     case success(data: String)
     case failure(error: Error)
     case disconnected(data: String)
+}
+
+enum DataTextField: String, CaseIterable {
+    case empty = "Empty"
+    case textFieldEmpty = "TextField Empty"
+    case email = "Email"
+    case emailIsNot = "Email Is Not"
+    case errorTextField = "Error"
+    case logo = "Disconnect Logo"
+    case password = "Password"
+    case wrongPassword = "wrong password"
+    case success = "Success"
+    case disconnected
+    case errorUpdateCoreData = "Error Update Core Data"
+    case errorCoreData = "Core Data"
+    case errorMessage = "Error Message"
+    case errorFaceId = "Face ID"
+    func getTitle() -> String {
+        return rawValue
+    }
 }
 
 extension Dictionary where Key == String, Value == Any {

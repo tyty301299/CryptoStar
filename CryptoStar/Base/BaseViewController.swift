@@ -8,28 +8,29 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         print("[HOT] \(className) init")
-
-        let originFrame = view.frame
-        view.frame = CGRect(x: originFrame.minX, y: -125, width: originFrame.width, height: originFrame.height)
     }
-
     deinit {
         print("[HOT] \(self.className) deinit")
     }
 
-    func backViewController() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "backImage"),
-            style: .done,
-            target: self,
-            action: #selector(backButtonPressed)
-        )
+    func setupNavigationBarView(navigationBarView: CustomNavigationBarView,
+                                title: TitleNavigationBar,
+                                notificationTitle: TitleNavigationBar = .isEmptyData) {
+        navigationBarView.setupNavigationBarButton()
+        navigationBarView.setupStyleNavigationBarLabel()
+        navigationBarView.titleLabel.setTitle(title)
+        navigationBarView.notificationLabel.isHidden = false
+        navigationBarView.notificationLabel.setTitle(notificationTitle)
+        navigationBarView.backButton.addTarget(self,
+                                               action: #selector(actionBackViewController),
+                                               for: .touchUpInside)
     }
 
-    @objc func backButtonPressed() {
+    @objc func actionBackViewController() {
         popViewController()
     }
 
@@ -37,10 +38,6 @@ class BaseViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
 }
+
+

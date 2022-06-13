@@ -8,10 +8,8 @@ import UIKit
 
 class ImageDownloader {
     static let shared = ImageDownloader()
-
     lazy var queue: OperationQueue = {
         let queue = OperationQueue()
-
         return queue
     }()
 
@@ -45,7 +43,6 @@ class DownloadOperation: Operation {
               let image = UIImage(data: data) else {
             return
         }
-
         self.image = image
     }
 }

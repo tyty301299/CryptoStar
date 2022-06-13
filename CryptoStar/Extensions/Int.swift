@@ -13,6 +13,6 @@ extension Int {
     }
 
     var scaleH: CGFloat {
-        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.ipad.height))
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.iphoneX.height))
     }
 }

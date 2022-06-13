@@ -7,9 +7,13 @@
 
 import Foundation
 import Network
+
 class API {
     static let shared = API()
-    static func request<T: Codable>(dataAPI: APICoin, completion: @escaping (ClosureResultCoin<T>) -> Void) {
+    static let queue = DispatchQueue.global()
+    
+    static func request<T: Codable>(dataAPI: APICoin,
+                                    completion: @escaping (ClosureResultCoin<T>) -> Void) {
         guard let urlString = dataAPI.url, let url = URL(string: urlString) else { return }
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
         if dataAPI.parameter?.isEmpty == false && dataAPI.method == HTTPMethod.GET {
@@ -17,7 +21,7 @@ class API {
         }
         var urlRequest = URLRequest(url: urlComponents!.url!)
         urlRequest.allHTTPHeaderFields = dataAPI.header
-        urlRequest.httpMethod = "GET"
+        urlRequest.httpMethod = HTTPMethod.GET.rawValue
         if dataAPI.method != HTTPMethod.GET {
             let body = dataAPI.parameter
             if let bodyData = try? JSONSerialization.data(withJSONObject: body ?? [:], options: .fragmentsAllowed) {
@@ -28,13 +32,14 @@ class API {
             DispatchQueue.main.async {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+
                 if let data = data {
                     if let responseData = try? decoder.decode(T.self, from: data) {
                         completion(.success(data: responseData))
-                    } else if let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String: Any] {
-                        print("Data:\(json), URL: \(url.absoluteString)")
-                        completion(.disconnected(data: "data"))
+                    } else {
+                        completion(.disconnected(data: "Data Empty"))
                     }
+
                 } else if let error = error {
                     completion(.failure(error: error))
                 } else {
@@ -43,10 +48,13 @@ class API {
             }
         }
 
-        dataTask.resume()
+        queue.async {
+            dataTask.resume()
+        }
     }
 
-    static func requestLogo(dataAPI: APICoin, completion: @escaping (ClosureResultLogo) -> Void) {
+    static func requestLogo(dataAPI: APICoin,
+                            completion: @escaping (ClosureResultLogo) -> Void) {
         let url = URL(string: dataAPI.url!)
         var urlComponents = URLComponents(url: url!, resolvingAgainstBaseURL: false)
         if dataAPI.parameter?.isEmpty == false && dataAPI.method == HTTPMethod.GET {
@@ -65,21 +73,18 @@ class API {
                         let logoLink = logo as? String ?? ""
                         completion(.success(data: logoLink))
                     } else {
-                        print("Data:\(json), URL: \(url?.absoluteString)")
                         completion(.disconnected(data: "data"))
                     }
                 } else if let error = error {
                     completion(.failure(error: error))
                 } else {
-                    print("Data:\(data) , Error: \(error) - URL: \(url?.absoluteString)")
                     completion(.disconnected(data: "disconnect"))
                 }
             }
         }
 
-        dataTask.resume()
+        queue.async {
+            dataTask.resume()
+        }
     }
-}
-
-extension Data {
 }

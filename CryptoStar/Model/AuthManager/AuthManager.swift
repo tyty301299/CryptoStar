@@ -7,11 +7,14 @@
 
 import FirebaseAuth
 import Foundation
+import UIKit
 
 class AuthManager {
     static let shared = AuthManager()
+    
     private let auth = Auth.auth()
     private var verificationID: String?
+    
     func startAuth(phoneNumber: String, completion: @escaping (ClosureResult<String>) -> Void) {
         PhoneAuthProvider.provider()
             .verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
@@ -26,7 +29,7 @@ class AuthManager {
                 self.verificationID = verificationID
             }
     }
-
+    
     func verifyCode(smsCode: String, completion: @escaping (ClosureResult<String>) -> Void) {
         guard let verificationID = verificationID else {
             return
@@ -42,9 +45,9 @@ class AuthManager {
             completion(.success(data: "success"))
         }
     }
-
+    
     func signInEmail(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
-        auth.signIn(withEmail: email, password: password) { _, error in
+        auth.signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 completion(.failure(error: error))
                 return
@@ -52,33 +55,34 @@ class AuthManager {
             completion(.success(data: "success"))
         }
     }
-
+    
     func signUpEmail(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
-        auth.createUser(withEmail: email, password: password) { _, error in
+        auth.createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 completion(.failure(error: error))
                 return
             }
-
+            
             completion(.success(data: "success"))
         }
     }
-
-    func signInEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
+    
+    func signUpEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
         let actionCodeSettings = ActionCodeSettings()
         actionCodeSettings.url = URL(string: "https://cryptostar-25b8b.firebaseapp.com")
         actionCodeSettings.handleCodeInApp = true
         actionCodeSettings.dynamicLinkDomain = "cryptostar.page.link"
         actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
-        print(Bundle.main.bundleIdentifier!)
+        
         Auth.auth().sendSignInLink(toEmail: email, actionCodeSettings: actionCodeSettings) { error in
             if let error = error {
                 completion(.failure(error: error))
                 return
             }
-            UserDefaults.standard.set(email, forKey: "Email")
-            UserDefaults.standard.set(password, forKey: "Pass")
+            UserDefaultUtils.password = password
+            UserDefaultUtils.email = email
             completion(.success(data: "success"))
         }
     }
 }
+
