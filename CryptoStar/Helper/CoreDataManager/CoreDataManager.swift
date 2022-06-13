@@ -13,7 +13,7 @@ class CoreDataManager {
     var context = AppDelegate.shared.persistentContainer.viewContext
     var persistentStoreCoordinator = AppDelegate.shared.persistentContainer.persistentStoreCoordinator
 
-    // MARK: -- DELETE ALL DATA IN CORE DATA
+    // MARK: DELETE ALL DATA IN CORE DATA
 
     static func deleteCoreData<T: Codable>(name: String, completion: @escaping (ClosureResult<T>) -> Void) {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: name)
@@ -28,7 +28,7 @@ class CoreDataManager {
         }
     }
 
-    // MARK: - - GET ALL DATA IN CORE DATA
+    // MARK: - GET ALL DATA IN CORE DATA
 
     static func getAllCoreData(name: String, id: String, completion: @escaping (ClosureResultCoreData) -> Void) {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "\(name)")
@@ -45,7 +45,7 @@ class CoreDataManager {
         }
     }
 
-    // MARK: - - UPDATE DATA OF THE SWITCH IN CORE DATA
+    // MARK: - UPDATE DATA OF THE SWITCH IN CORE DATA
 
     static func updateDataSwitch<T: Codable>(coin: CoinEntity, valueSwitch: Bool, completion: @escaping (ClosureResult<T>) -> Void) {
         let entity = NSEntityDescription.entity(forEntityName: "CoinEntity", in: CoreDataManager.shared.context)
@@ -53,27 +53,31 @@ class CoreDataManager {
         request.entity = entity
         let predicate = NSPredicate(format: "id = '\(coin.id)'")
         request.predicate = predicate
-        do {
-            let results =
-                try CoreDataManager.shared.context.fetch(request)
-            let objectUpdate = results[0] as! NSManagedObject
-            objectUpdate.setValue(valueSwitch, forKey: "checkSwitch")
-
+        DispatchQueue.main.async {
             do {
-                try CoreDataManager.shared.context.save()
-                completion(.success(data: "Record Updated!" as! T))
+                let results =
+                    try CoreDataManager.shared.context.fetch(request)
+                if !results.isEmpty {
+                    let objectUpdate = results.first as! NSManagedObject
+                    objectUpdate.setValue(valueSwitch, forKey: "checkSwitch")
+                }
 
+                do {
+                    try CoreDataManager.shared.context.save()
+                    completion(.success(data: "Record Updated!" as! T))
+
+                } catch
+                let error as NSError {
+                    completion(.failure(error: error))
+                }
             } catch
             let error as NSError {
                 completion(.failure(error: error))
             }
-        } catch
-        let error as NSError {
-            completion(.failure(error: error))
         }
     }
 
-    // MARK: - - UPDATE LOGO
+    // MARK: - UPDATE LOGO
 
     static func updateLogo<T: Codable>(coin: Coin, completion: @escaping (ClosureResult<T>) -> Void) {
         let entity = NSEntityDescription.entity(forEntityName: "CoinEntity", in: CoreDataManager.shared.context)
@@ -81,27 +85,31 @@ class CoreDataManager {
         request.entity = entity
         let predicate = NSPredicate(format: "id = '\(coin.id)'")
         request.predicate = predicate
-        do {
-            let results =
-                try CoreDataManager.shared.context.fetch(request)
-            let objectUpdate = results[0] as! NSManagedObject
-            objectUpdate.setValue(coin.logo, forKey: "logo")
-
+        DispatchQueue.main.async {
             do {
-                try CoreDataManager.shared.context.save()
-                completion(.success(data: "Record Updated!" as! T))
+                let results =
+                    try CoreDataManager.shared.context.fetch(request)
+                if !results.isEmpty {
+                    let objectUpdate = results.first as! NSManagedObject
+                    objectUpdate.setValue(coin.logo, forKey: "logo")
+                }
 
+                do {
+                    try CoreDataManager.shared.context.save()
+                    completion(.success(data: "Record Updated!" as! T))
+
+                } catch
+                let error as NSError {
+                    completion(.failure(error: error))
+                }
             } catch
             let error as NSError {
                 completion(.failure(error: error))
             }
-        } catch
-        let error as NSError {
-            completion(.failure(error: error))
         }
     }
 
-    // MARK: - - SAVE DATA IN CORE DATA
+    // MARK: SAVE DATA IN CORE DATA
 
     static func saveCoreData<T: Codable>(dataCoin: Coin, completion: @escaping ((ClosureResult<T>) -> Void)) {
         let coin = CoinEntity(context: CoreDataManager.shared.context)
@@ -135,7 +143,6 @@ class CoreDataManager {
 
             do {
                 try CoreDataManager.shared.context.save()
-                
 
             } catch let error as NSError {
                 completion(.failure(error: error))
@@ -143,4 +150,7 @@ class CoreDataManager {
         }
         completion(.success(data: "Success" as! T))
     }
+}
+
+extension CoreDataManager {
 }

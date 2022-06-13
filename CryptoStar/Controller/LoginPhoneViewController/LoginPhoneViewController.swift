@@ -14,7 +14,6 @@ class LoginPhoneViewController: BaseViewController {
 
     @IBOutlet private var topPhoneViewLC: NSLayoutConstraint!
     @IBOutlet private var bottomSendOTPButtonLC: NSLayoutConstraint!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,41 +22,40 @@ class LoginPhoneViewController: BaseViewController {
                                title: .loginPhone)
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    func setupViews() {
+        phoneNumberView.dataInputTextField.delegate = self
+        phoneNumberView.setupTextLabel(text: .phoneNumber)
+        phoneNumberView.setupTextField(keyboardType: .numberPad)
+
+        sendOTPButton.setUpButton(text: .otp, background: .black, textColor: .white)
+        sendOTPButton.addTarget(self, action: #selector(actionSendNumberPhone), for: .touchUpInside)
+
         topPhoneViewLC.constant = 237.scaleH
         bottomSendOTPButtonLC.constant = 20.scaleH
     }
 
-    func setupViews() {
-        phoneNumberView.dataInputTextField.delegate = self
-        phoneNumberView.setUpTextLabel(text: .phoneNumber)
-        phoneNumberView.setUpTextField(keyboardType: .numberPad)
-
-        sendOTPButton.setUpButton(text: .otp, background: .black, textColor: .white)
-        sendOTPButton.addTarget(self, action: #selector(actionSend), for: .touchUpInside)
-    }
-
-    @objc func actionSend() {
-        if let text = phoneNumberView.dataInputTextField.text, text.isNotEmpty {
-            var numberPhone = text
+    @objc func actionSendNumberPhone() {
+        if let numberPhoneText = phoneNumberView.dataInputTextField.text, numberPhoneText.isNotEmpty {
+            var numberPhone = numberPhoneText
             if numberPhone[numberPhone.startIndex] == "0" {
                 numberPhone.remove(at: numberPhone.startIndex)
             }
-            let number = "+84\(numberPhone)"
+            var number = "+84\(numberPhone)"
 
-            AuthManager.shared.startAuth(phoneNumber: number) { [weak self] (result: ClosureResult<String>) in
+            AuthManager.shared.startAuth(phoneNumber: number.removingLeadingSpaces()) { [weak self] (result: ClosureResult<String>) in
+                guard let self = self else {
+                    return
+                }
                 switch result {
                 case .success:
                     DispatchQueue.main.async {
-                        let verifyPhoneVC = VerifyPhoneNumberViewController()
-                        //TODO: Fix it
-                        verifyPhoneVC.numberphone = number
-                        self?.pushViewController(verifyPhoneVC)
+                        let verifyPhoneNumerViewController = VerifyPhoneNumberViewController()
+                        verifyPhoneNumerViewController.numberphone = number.removingLeadingSpaces()
+                        self.pushViewController(verifyPhoneNumerViewController)
                     }
                     break
                 case let .failure(error):
-                    self?.showAlert(title: .errorTextField, message: error.localizedDescription)
+                    self.showAlert(title: .errorTextField, message: error.localizedDescription)
                 }
             }
         }
@@ -65,14 +63,27 @@ class LoginPhoneViewController: BaseViewController {
 }
 
 extension LoginPhoneViewController: UITextFieldDelegate {
+    // MARK: LIMIT SIZE TEXTFIELD
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-       
-        guard let textFieldText = textField.text,
-              let rangeOfTextToReplace = Range(range, in: textFieldText) else {
-            return false
+        guard let text = textField.text else { return false }
+        let newString = (text as NSString).replacingCharacters(in: range, with: string)
+        textField.text = format(with: "XXXX XXX XXXX", phone: newString)
+        return false
+    }
+
+    func format(with mask: String, phone: String) -> String {
+        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = numbers.startIndex
+        for char in mask where index < numbers.endIndex {
+            if char == "X" {
+                result.append(numbers[index])
+                index = numbers.index(after: index)
+            } else {
+                result.append(char)
+            }
         }
-        let subStringToReplace = textFieldText[rangeOfTextToReplace]
-        let count = textFieldText.count - subStringToReplace.count + string.count
-        return count <= Limit.numberPhone
+        return result
     }
 }

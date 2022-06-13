@@ -8,11 +8,10 @@
 import UIKit
 
 class OTPView: UIStackView {
-    var textFieldArray = [OTPTextField]()
-    var numberOfOTPdigit = 6
+    private var textFieldArray = [OTPTextField]()
+    private var numberOfOTPdigit = 6
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setupStackView()
         setTextFields()
     }
@@ -28,6 +27,7 @@ class OTPView: UIStackView {
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .center
         distribution = .fillEqually
+        backgroundColor = .white
         spacing = 8.scaleW
     }
 

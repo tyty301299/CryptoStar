@@ -20,7 +20,6 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
     @IBOutlet private var topDataInputViewLC: NSLayoutConstraint!
     @IBOutlet private var bottomLoginButtonLC: NSLayoutConstraint!
     @IBOutlet private var bottomLoginNowViewLC: NSLayoutConstraint!
-    var activityIndicator = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +28,6 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
         setupLabels()
         setupNavigationBarView(navigationBarView: navigationBarView,
                                title: .loginEmail)
-        setupActivityIndicatorView()
     }
 
     override func viewDidLayoutSubviews() {
@@ -39,14 +37,6 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
         topDataInputViewLC.constant = 237.scaleW
         bottomLoginButtonLC.constant = 20.scaleW
         bottomLoginNowViewLC.constant = 64.scaleW
-    }
-
-    func setupActivityIndicatorView() {
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
-        activityIndicator.color = UIColor.red
-        view.addSubview(activityIndicator)
     }
 
     func setupLabels() {
@@ -67,10 +57,10 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
                                 background: .black,
                                 textColor: .white)
 
-        emailView.setUpTextLabel(text: .emailID)
-        emailView.setUpTextField(keyboardType: .emailAddress)
-        passwordView.setUpTextLabel(text: .password)
-        passwordView.setUpTextField(keyboardType: .default,
+        emailView.setupTextLabel(text: .emailID)
+        emailView.setupTextField(keyboardType: .emailAddress)
+        passwordView.setupTextLabel(text: .password)
+        passwordView.setupTextField(keyboardType: .default,
                                     secureTextEntry: true)
         emailView.dataInputTextField.delegate = self
         passwordView.dataInputTextField.delegate = self
@@ -89,17 +79,19 @@ class LoginEmailViewController: BaseViewController, UIGestureRecognizerDelegate 
         }
 
         AuthManager.shared.signInEmail(email: email, password: password.MD5) { [weak self] result in
+            guard let self = self else {
+                return
+            }
             switch result {
             case .success:
                 UIView.animate(withDuration: 3) {
-                    self?.activityIndicator.startAnimating()
                 }
                 DispatchQueue.main.async {
-                    self?.activityIndicator.stopAnimating()
-                    self?.appDelegate.setTabBarViewController()
+                    self.appDelegate.setTabBarViewController()
                 }
             case let .failure(error):
-                self?.showAlert(title: .errorTextField, message: error.localizedDescription)
+                self.showAlert(title: .errorTextField,
+                               message: error.localizedDescription)
             }
         }
     }

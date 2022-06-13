@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,9 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePINViewController" customModule="CryptoStar" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePinViewController" customModule="CryptoStar" customModuleProvider="target">
             <connections>
-                <outlet property="createPINButton" destination="SLd-ee-hHJ" id="p8U-OW-OSU"/>
+                <outlet property="createPinButton" destination="SLd-ee-hHJ" id="6HA-fs-mho"/>
                 <outlet property="navigationBarView" destination="Eyo-KZ-cPR" id="I8W-kL-W78"/>
                 <outlet property="numberCollectionView" destination="fOJ-4x-y7I" id="Jv8-Xc-hFm"/>
                 <outlet property="numberTextField" destination="YwD-e5-mhd" id="3eH-nC-7bY"/>
@@ -28,14 +29,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-ee-hHJ">
-                    <rect key="frame" x="20" y="823" width="374" height="53"/>
+                    <rect key="frame" x="20" y="813" width="374" height="53"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain"/>
+                    <buttonConfiguration key="configuration" style="plain" title=""/>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fOJ-4x-y7I">
-                    <rect key="frame" x="60" y="522" width="294" height="236"/>
+                    <rect key="frame" x="60" y="512" width="294" height="236"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="xlm-fo-pe2">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xlm-fo-pe2">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -43,9 +44,9 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-e5-mhd">
-                    <rect key="frame" x="20" y="414" width="374" height="53"/>
+                    <rect key="frame" x="20" y="404" width="374" height="53"/>
                     <color key="backgroundColor" name="color6E7F8D"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
             </subviews>
@@ -64,7 +65,7 @@
                 <constraint firstItem="SLd-ee-hHJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SgE-Dl-loN"/>
                 <constraint firstItem="fOJ-4x-y7I" firstAttribute="top" secondItem="YwD-e5-mhd" secondAttribute="bottom" constant="55" id="V0W-Xd-D8k"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SLd-ee-hHJ" secondAttribute="trailing" constant="20" id="Z9o-mi-kbl"/>
-                <constraint firstAttribute="bottom" secondItem="SLd-ee-hHJ" secondAttribute="bottom" constant="20" id="eKV-hZ-XG3"/>
+                <constraint firstAttribute="bottom" secondItem="SLd-ee-hHJ" secondAttribute="bottom" constant="30" id="eKV-hZ-XG3"/>
                 <constraint firstItem="SLd-ee-hHJ" firstAttribute="top" secondItem="fOJ-4x-y7I" secondAttribute="bottom" constant="65" id="nXK-4a-mqa"/>
                 <constraint firstItem="Eyo-KZ-cPR" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="56:812" id="o46-IZ-khq"/>
                 <constraint firstItem="Eyo-KZ-cPR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qmv-TT-yaK"/>

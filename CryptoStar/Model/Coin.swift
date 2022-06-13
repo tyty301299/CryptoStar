@@ -55,9 +55,12 @@ struct DataDrawLine {
     var usd: Double
 }
 
+struct CoinEntities {
+    var data: [CoinEntity]
+}
+
 struct Limit {
     static var email = 256
     static var password = 8
     static var numberPhone = 11
 }
-

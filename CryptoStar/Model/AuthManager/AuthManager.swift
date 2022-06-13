@@ -67,7 +67,7 @@ class AuthManager {
         }
     }
     
-    func signInEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
+    func signUpEmailLink(email: String, password: String, completion: @escaping (ClosureResult<String>) -> Void) {
         let actionCodeSettings = ActionCodeSettings()
         actionCodeSettings.url = URL(string: "https://cryptostar-25b8b.firebaseapp.com")
         actionCodeSettings.handleCodeInApp = true

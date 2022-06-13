@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,20 +26,21 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-k5-y8T">
-                    <rect key="frame" x="0.0" y="138" width="414" height="644"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="148" width="414" height="668"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qVj-nb-yhd" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="125/812" id="4Vm-P2-aR4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qVj-nb-yhd" secondAttribute="trailing" id="61x-qj-iKW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dkL-k5-y8T" secondAttribute="trailing" id="C1K-R7-Ihl"/>
                 <constraint firstItem="qVj-nb-yhd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qe4-PD-KR8"/>
-                <constraint firstItem="dkL-k5-y8T" firstAttribute="top" secondItem="qVj-nb-yhd" secondAttribute="bottom" id="YcK-Pt-urz"/>
+                <constraint firstItem="dkL-k5-y8T" firstAttribute="top" secondItem="qVj-nb-yhd" secondAttribute="bottom" constant="10" id="YcK-Pt-urz"/>
                 <constraint firstItem="dkL-k5-y8T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gCs-hl-OSs"/>
                 <constraint firstItem="qVj-nb-yhd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lHd-03-hb2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dkL-k5-y8T" secondAttribute="bottom" constant="80" id="zz1-Ow-aWG"/>
+                <constraint firstAttribute="bottom" secondItem="dkL-k5-y8T" secondAttribute="bottom" constant="80" id="zz1-Ow-aWG"/>
             </constraints>
             <point key="canvasLocation" x="139" y="63"/>
         </view>

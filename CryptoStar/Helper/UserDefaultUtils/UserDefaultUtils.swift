@@ -25,6 +25,7 @@ class UserDefaultUtils {
 enum UserDefaultKey: String {
     case email = "email"
     case password = "password"
+    case faceID
 }
 
 extension UserDefaultUtils {
@@ -43,6 +44,15 @@ extension UserDefaultUtils {
         }
         set {
             shared.set(newValue, forKey: UserDefaultKey.password.rawValue)
+        }
+    }
+
+    static var isFaceID: Bool {
+        get {
+            shared.get(forKey: UserDefaultKey.faceID, false) ?? false
+        }
+        set {
+            shared.set(newValue, forKey: UserDefaultKey.faceID.rawValue)
         }
     }
 }

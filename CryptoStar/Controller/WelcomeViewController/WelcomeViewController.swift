@@ -24,17 +24,17 @@ class WelcomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupLayoutViews()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupLayoutViews()
+        
     }
     
     func setupViews(){
         titleLabel.font = .sfProDisplay(font: .bold, size: 26)
         storeWatchLabel.font = .sfProDisplay(font: .regular, size: 18)
-
         loginPhoneButton.setUpButton(text: .loginPhone, background: .black, textColor: .white)
         loginEmailButton.setUpButton(text: .loginEmail, background: .black, textColor: .white)
     }

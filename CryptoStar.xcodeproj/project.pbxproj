@@ -48,6 +48,14 @@
 		B49C211728362E1300D4FCEE /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211328362E1300D4FCEE /* SF-Pro-Display-Bold.otf */; };
 		B49C211828362E1300D4FCEE /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211428362E1300D4FCEE /* SF-Pro-Display-Medium.otf */; };
 		B49C211928362E1300D4FCEE /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B49C211528362E1300D4FCEE /* SF-Pro-Display-Semibold.otf */; };
+		B49F28FC28503012006CAC3C /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F28FB28503012006CAC3C /* KeyChainManager.swift */; };
+		B49F290628507471006CAC3C /* LoginFaceIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F290428507471006CAC3C /* LoginFaceIDViewController.swift */; };
+		B49F290728507471006CAC3C /* LoginFaceIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F290528507471006CAC3C /* LoginFaceIDViewController.xib */; };
+		B49F290D285192F0006CAC3C /* ATRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F290C285192F0006CAC3C /* ATRefreshControl.swift */; };
+		B49F29112851CED1006CAC3C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F290F2851CED1006CAC3C /* WebViewController.swift */; };
+		B49F29122851CED1006CAC3C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F29102851CED1006CAC3C /* WebViewController.xib */; };
+		B49F29142852F7ED006CAC3C /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F29132852F7ED006CAC3C /* UITextField.swift */; };
+		B49F292228544DC5006CAC3C /* CoinEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F292128544DC5006CAC3C /* CoinEntity.swift */; };
 		B4ADA01328364258007D320E /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01228364258007D320E /* WelcomeViewController.xib */; };
 		B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADA01628364CA0007D320E /* DataInputView.xib */; };
 		B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADA01B28364E18007D320E /* DataInputView.swift */; };
@@ -77,8 +85,8 @@
 		B4D6285C28449A6500121D7A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D6285B28449A6500121D7A /* String.swift */; };
 		B4D9C3CD284B4BFE00D5FE41 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C3CB284B4BFE00D5FE41 /* SettingCell.swift */; };
 		B4D9C3CE284B4BFE00D5FE41 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D9C3CC284B4BFE00D5FE41 /* SettingCell.xib */; };
-		B4D9C3D2284B565900D5FE41 /* CreatePINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C3D0284B565900D5FE41 /* CreatePINViewController.swift */; };
-		B4D9C3D3284B565900D5FE41 /* CreatePINViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D9C3D1284B565900D5FE41 /* CreatePINViewController.xib */; };
+		B4D9C3D2284B565900D5FE41 /* CreatePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C3D0284B565900D5FE41 /* CreatePinViewController.swift */; };
+		B4D9C3D3284B565900D5FE41 /* CreatePinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D9C3D1284B565900D5FE41 /* CreatePinViewController.xib */; };
 		B4F6CFE02848B26400471D1E /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6CFDE2848B26400471D1E /* TokenViewController.swift */; };
 		B4F6CFE12848B26400471D1E /* TokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F6CFDF2848B26400471D1E /* TokenViewController.xib */; };
 		B4F6CFE72848D60400471D1E /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6CFE62848D60400471D1E /* UserDefaultUtils.swift */; };
@@ -133,6 +141,14 @@
 		B49C211328362E1300D4FCEE /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		B49C211428362E1300D4FCEE /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		B49C211528362E1300D4FCEE /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		B49F28FB28503012006CAC3C /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		B49F290428507471006CAC3C /* LoginFaceIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFaceIDViewController.swift; sourceTree = "<group>"; };
+		B49F290528507471006CAC3C /* LoginFaceIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFaceIDViewController.xib; sourceTree = "<group>"; };
+		B49F290C285192F0006CAC3C /* ATRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATRefreshControl.swift; sourceTree = "<group>"; };
+		B49F290F2851CED1006CAC3C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B49F29102851CED1006CAC3C /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		B49F29132852F7ED006CAC3C /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		B49F292128544DC5006CAC3C /* CoinEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinEntity.swift; sourceTree = "<group>"; };
 		B4ADA01228364258007D320E /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		B4ADA01628364CA0007D320E /* DataInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataInputView.xib; sourceTree = "<group>"; };
 		B4ADA01B28364E18007D320E /* DataInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputView.swift; sourceTree = "<group>"; };
@@ -157,13 +173,13 @@
 		B4D627F1284318C700121D7A /* ItemTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTabBarView.xib; sourceTree = "<group>"; };
 		B4D627F32843403B00121D7A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = CryptoStar/Helper/API.swift; sourceTree = SOURCE_ROOT; };
 		B4D627F5284341F800121D7A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = CryptoStar/Helper/ImageDownloader.swift; sourceTree = SOURCE_ROOT; };
-		B4D627F72843427100121D7A /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		B4D627F72843427100121D7A /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = CryptoStar/Model/Coin.swift; sourceTree = SOURCE_ROOT; };
 		B4D6285928446A3200121D7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4D6285B28449A6500121D7A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B4D9C3CB284B4BFE00D5FE41 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		B4D9C3CC284B4BFE00D5FE41 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
-		B4D9C3D0284B565900D5FE41 /* CreatePINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePINViewController.swift; sourceTree = "<group>"; };
-		B4D9C3D1284B565900D5FE41 /* CreatePINViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePINViewController.xib; sourceTree = "<group>"; };
+		B4D9C3D0284B565900D5FE41 /* CreatePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinViewController.swift; sourceTree = "<group>"; };
+		B4D9C3D1284B565900D5FE41 /* CreatePinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePinViewController.xib; sourceTree = "<group>"; };
 		B4F6CFDE2848B26400471D1E /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
 		B4F6CFDF2848B26400471D1E /* TokenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenViewController.xib; sourceTree = "<group>"; };
 		B4F6CFE62848D60400471D1E /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
@@ -210,6 +226,8 @@
 		B4261BCF284E13070036965D /* Coin */ = {
 			isa = PBXGroup;
 			children = (
+				B4D627F72843427100121D7A /* Coin.swift */,
+				B49F292128544DC5006CAC3C /* CoinEntity.swift */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -331,6 +349,7 @@
 				B43E97A42835EEA900F47ADF /* BaseNavigationController.swift */,
 				B431DE62283B831900CB5EB6 /* BaseNibView.swift */,
 				B4ADA7D128460229007B11B4 /* ImageCache.swift */,
+				B49F290C285192F0006CAC3C /* ATRefreshControl.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -338,6 +357,8 @@
 		B43E97852835D75800F47ADF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B49F290E2851CE8B006CAC3C /* WebViewController */,
+				B49F28FD285073D1006CAC3C /* LoginFaceIDViewController */,
 				B43E97AA2835EF5600F47ADF /* WelcomeViewController */,
 				B4ADA01D283671FD007D320E /* LoginPhoneViewController */,
 				B4ADA031283A428C007D320E /* VerifyPhoneNumberViewController */,
@@ -347,7 +368,7 @@
 				B431DE6A283C66E800CB5EB6 /* ChartsViewController */,
 				B431DE6B283C670000CB5EB6 /* SettingViewController */,
 				B4F6CFDD2848B24400471D1E /* TokenViewController */,
-				B4D9C3CF284B562600D5FE41 /* CreatePINViewController */,
+				B4D9C3CF284B562600D5FE41 /* CreatePinViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +389,7 @@
 				B4D6285B28449A6500121D7A /* String.swift */,
 				B4548442284BDAD800690108 /* UICollectionView.swift */,
 				B4ADA7D328460B97007B11B4 /* UIImageView.swift */,
+				B49F29132852F7ED006CAC3C /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,9 +418,9 @@
 		B43E97892835D7B900F47ADF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B49F28FA28502FED006CAC3C /* KeyChainManager */,
 				B4261BD0284E13140036965D /* AuthManager */,
 				B4261BCF284E13070036965D /* Coin */,
-				B4D627F72843427100121D7A /* Coin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -532,6 +554,32 @@
 			path = "SF-Pro-Display";
 			sourceTree = "<group>";
 		};
+		B49F28FA28502FED006CAC3C /* KeyChainManager */ = {
+			isa = PBXGroup;
+			children = (
+				B49F28FB28503012006CAC3C /* KeyChainManager.swift */,
+			);
+			path = KeyChainManager;
+			sourceTree = "<group>";
+		};
+		B49F28FD285073D1006CAC3C /* LoginFaceIDViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B49F290428507471006CAC3C /* LoginFaceIDViewController.swift */,
+				B49F290528507471006CAC3C /* LoginFaceIDViewController.xib */,
+			);
+			path = LoginFaceIDViewController;
+			sourceTree = "<group>";
+		};
+		B49F290E2851CE8B006CAC3C /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B49F290F2851CED1006CAC3C /* WebViewController.swift */,
+				B49F29102851CED1006CAC3C /* WebViewController.xib */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
 		B4ADA01828364DC2007D320E /* DataInput */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,13 +660,13 @@
 			path = SettingCell;
 			sourceTree = "<group>";
 		};
-		B4D9C3CF284B562600D5FE41 /* CreatePINViewController */ = {
+		B4D9C3CF284B562600D5FE41 /* CreatePinViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B4D9C3D0284B565900D5FE41 /* CreatePINViewController.swift */,
-				B4D9C3D1284B565900D5FE41 /* CreatePINViewController.xib */,
+				B4D9C3D0284B565900D5FE41 /* CreatePinViewController.swift */,
+				B4D9C3D1284B565900D5FE41 /* CreatePinViewController.xib */,
 			);
-			path = CreatePINViewController;
+			path = CreatePinViewController;
 			sourceTree = "<group>";
 		};
 		B4F6CFDC2848ACB200471D1E /* API */ = {
@@ -710,6 +758,7 @@
 				B4ADA035283A42CA007D320E /* VerifyPhoneNumberViewController.xib in Resources */,
 				B4ADA02128367234007D320E /* LoginPhoneViewController.xib in Resources */,
 				B431DE8C283E1F6900CB5EB6 /* CoinPriceCell.xib in Resources */,
+				B49F29122851CED1006CAC3C /* WebViewController.xib in Resources */,
 				B4F6CFEB28492FAE00471D1E /* ChartsCoinCell.xib in Resources */,
 				B431DE6F283C674C00CB5EB6 /* HomeViewController.xib in Resources */,
 				B431DE77283C677000CB5EB6 /* SettingViewController.xib in Resources */,
@@ -728,9 +777,10 @@
 				B49C211628362E1300D4FCEE /* SF-Pro-Display-Regular.otf in Resources */,
 				B43E97792835D5FD00F47ADF /* Assets.xcassets in Resources */,
 				B431DE73283C675C00CB5EB6 /* ChartsViewController.xib in Resources */,
+				B49F290728507471006CAC3C /* LoginFaceIDViewController.xib in Resources */,
 				B4D6285A28446A3200121D7A /* GoogleService-Info.plist in Resources */,
 				B4BB007B283A71D00013E445 /* LoginEmailViewController.xib in Resources */,
-				B4D9C3D3284B565900D5FE41 /* CreatePINViewController.xib in Resources */,
+				B4D9C3D3284B565900D5FE41 /* CreatePinViewController.xib in Resources */,
 				B4D9C3CE284B4BFE00D5FE41 /* SettingCell.xib in Resources */,
 				B4ADA01728364CA0007D320E /* DataInputView.xib in Resources */,
 			);
@@ -791,7 +841,9 @@
 				B431DE6E283C674C00CB5EB6 /* HomeViewController.swift in Sources */,
 				B43E97932835E57500F47ADF /* UIColor.swift in Sources */,
 				B4D627F82843427100121D7A /* Coin.swift in Sources */,
+				B49F292228544DC5006CAC3C /* CoinEntity.swift in Sources */,
 				B43E97A12835EACC00F47ADF /* BaseViewController.swift in Sources */,
+				B49F28FC28503012006CAC3C /* KeyChainManager.swift in Sources */,
 				B4D627F0284318A500121D7A /* ItemTabBarView.swift in Sources */,
 				B4BB007A283A71D00013E445 /* LoginEmailViewController.swift in Sources */,
 				B4ADA01C28364E18007D320E /* DataInputView.swift in Sources */,
@@ -806,15 +858,18 @@
 				B431DE8B283E1F6900CB5EB6 /* CoinPriceCell.swift in Sources */,
 				B4ADA02E28379593007D320E /* CustomNavigationBarView.swift in Sources */,
 				B4D6285C28449A6500121D7A /* String.swift in Sources */,
+				B49F290628507471006CAC3C /* LoginFaceIDViewController.swift in Sources */,
+				B49F29112851CED1006CAC3C /* WebViewController.swift in Sources */,
 				B43E97A82835EF4F00F47ADF /* WelcomeViewController.swift in Sources */,
 				B43E97A32835ED5500F47ADF /* BaseTabBarController.swift in Sources */,
 				B4548443284BDAD800690108 /* UICollectionView.swift in Sources */,
 				B4261BCB284DBA2D0036965D /* CoreDataManager.swift in Sources */,
 				B43E979E2835E9C800F47ADF /* UITableView.swift in Sources */,
+				B49F290D285192F0006CAC3C /* ATRefreshControl.swift in Sources */,
 				B43E97A52835EEA900F47ADF /* BaseNavigationController.swift in Sources */,
 				B4548440284BDAB000690108 /* NumberCollectionViewCell.swift in Sources */,
 				B4ADA02028367234007D320E /* LoginPhoneViewController.swift in Sources */,
-				B4D9C3D2284B565900D5FE41 /* CreatePINViewController.swift in Sources */,
+				B4D9C3D2284B565900D5FE41 /* CreatePinViewController.swift in Sources */,
 				B431DE7E283C884600CB5EB6 /* UIView.swift in Sources */,
 				B431DE61283B5EBD00CB5EB6 /* Helper.swift in Sources */,
 				B4BB0073283A5D650013E445 /* OTPView.swift in Sources */,
@@ -831,6 +886,7 @@
 				B43E976F2835D5F900F47ADF /* SceneDelegate.swift in Sources */,
 				B431DE63283B831900CB5EB6 /* BaseNibView.swift in Sources */,
 				B4BB0077283A5DF90013E445 /* OTPTextField.swift in Sources */,
+				B49F29142852F7ED006CAC3C /* UITextField.swift in Sources */,
 				B431DE5F283B366C00CB5EB6 /* UIButton.swift in Sources */,
 				B4F6CFEA28492FAE00471D1E /* ChartsCoinCell.swift in Sources */,
 				B4ADA7D228460229007B11B4 /* ImageCache.swift in Sources */,
@@ -987,7 +1043,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1021,7 +1077,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,10 +14,14 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ChartsCoinCell" customModule="CryptoStar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="355" height="230"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="355" height="230"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnJ-b1-YJH">
+                        <rect key="frame" x="19" y="20" width="317" height="190"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-x2-elZ">
                         <rect key="frame" x="19" y="20" width="317" height="190"/>
                         <subviews>
@@ -82,6 +87,10 @@
                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="zcb-x2-elZ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="DBP-wa-C2F"/>
+                    <constraint firstItem="YnJ-b1-YJH" firstAttribute="bottom" secondItem="zcb-x2-elZ" secondAttribute="bottom" id="QBq-RJ-RNx"/>
+                    <constraint firstItem="YnJ-b1-YJH" firstAttribute="top" secondItem="zcb-x2-elZ" secondAttribute="top" id="SJg-yV-6t1"/>
+                    <constraint firstItem="YnJ-b1-YJH" firstAttribute="trailing" secondItem="zcb-x2-elZ" secondAttribute="trailing" id="f1S-0O-iK9"/>
+                    <constraint firstItem="YnJ-b1-YJH" firstAttribute="leading" secondItem="zcb-x2-elZ" secondAttribute="leading" id="jxr-jC-JM8"/>
                     <constraint firstItem="zcb-x2-elZ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="335:375" id="pT1-Tz-PKU"/>
                     <constraint firstItem="zcb-x2-elZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pqT-4k-0EO"/>
                     <constraint firstItem="zcb-x2-elZ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="190:230" id="tDi-CT-R3q"/>
@@ -97,6 +106,7 @@
                 <outlet property="logoImageView" destination="u5t-mc-4Tx" id="2J8-oG-R6L"/>
                 <outlet property="nameCoinLabel" destination="LEl-hE-4QJ" id="6YX-S0-BcL"/>
                 <outlet property="priceLabel" destination="or4-5N-6Dt" id="4SF-kB-BM8"/>
+                <outlet property="shadowView" destination="YnJ-b1-YJH" id="DrB-SK-LQ3"/>
                 <outlet property="symbolLabel" destination="ucA-d2-6ur" id="wt0-V6-Kjh"/>
                 <outlet property="topLogoImageViewLC" destination="MZA-If-tBE" id="liO-4M-7r8"/>
                 <outlet property="topNameCoinLabelLC" destination="h2B-sX-2eu" id="dNf-Od-msR"/>

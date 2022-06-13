@@ -12,5 +12,5 @@ struct Ratio {
         width: UIScreen.main.bounds.width / 375,
         height: UIScreen.main.bounds.height / 812
     )
-    static let ipad = CGSize(width: 1.3, height: 1.3)
+    static let ipad = CGSize(width: 1.2, height: 1.2)
 }

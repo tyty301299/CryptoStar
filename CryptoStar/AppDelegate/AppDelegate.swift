@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  CryptoStar
@@ -10,10 +11,10 @@ import Firebase
 import FirebaseAuth
 import FirebaseCore
 import UIKit
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
     static var shared: AppDelegate {
         return UIApplication.shared.delegate as? AppDelegate ?? AppDelegate()
     }
@@ -23,22 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configRootViewController()
         return true
     }
-
+// MARK: - Screen Root View Controller
+    
     func configRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let mainVC = WelcomeViewController()
-        let nav = BaseNavigationController(rootViewController: mainVC)
-        window?.rootViewController = nav
         if Auth.auth().currentUser != nil {
             setTabBarViewController()
         } else {
             setWelcomeViewController()
         }
-
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
     }
 
+    // MARK: Verify Email
     func application(_ application: UIApplication, continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         return userActivity.webpageURL.flatMap(handlePasswordlessSignIn) ?? false
@@ -56,8 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case .success:
                         self?.setTabBarViewController()
                     case let .failure(error):
-                        // Crash app
-                        self?.inputViewController?.showAlert(title: .errorTextField, message: error.localizedDescription)
+                        UIApplication.topViewController()?.showAlert(title: .errorTextField, message: error.localizedDescription)
                     }
                 }
                 return true
@@ -72,8 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let container = NSPersistentContainer(name: "CryptoStar")
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
-                self.inputViewController?.showAlert(title: .errorCoreData,
-                                                    message: error.localizedDescription)
+                UIApplication.topViewController()?.showAlert(title: .errorCoreData, message: error.localizedDescription)
             }
         }
         return container
@@ -88,13 +85,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 try context.save()
             } catch {
                 let error = error as NSError
-                inputViewController?.showAlert(title: .errorCoreData,
-                                               message: "\(error.userInfo)")
+                UIApplication.topViewController()?.showAlert(title: .errorCoreData, message: error.localizedDescription)
             }
         }
     }
 }
+// MARK: USE FUNCTIONS IN VIEWCONTROLLER
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = AppDelegate.shared.window?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}
 
+// MARK: - ROOT VIEWCONTROLLER
 extension AppDelegate {
     func setWelcomeViewController() {
         let mainVC = WelcomeViewController()

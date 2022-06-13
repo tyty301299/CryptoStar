@@ -70,7 +70,6 @@ class ItemTabBarView: UIView {
 
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         let constraintImageView = [
-            // iconImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             iconImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             iconImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             iconImageView.heightAnchor.constraint(equalToConstant: 20.scaleW),
@@ -81,7 +80,6 @@ class ItemTabBarView: UIView {
 
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraintLabel = [
-            // nameLable.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             nameLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 2.scaleW),
             nameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),

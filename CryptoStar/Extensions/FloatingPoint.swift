@@ -13,7 +13,7 @@ extension FloatingPoint where Self == Double {
     }
 
     var scaleH: CGFloat {
-        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.ipad.height))
+        return (CGFloat(self) * (Helper.isPad ? Ratio.ipad.height : Ratio.iphoneX.height))
     }
 
     var subString: String {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,14 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyPhoneNumberViewController" customModule="CryptoStar" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="3NY-kT-z3C" id="4Np-S8-Akg"/>
                 <outlet property="bottomVerificaionPhoneButtonLC" destination="nTP-sP-gEq" id="Shk-0l-RIf"/>
                 <outlet property="navigationBarView" destination="Hrb-6O-6N9" id="seA-9H-0f5"/>
                 <outlet property="otpView" destination="X7y-9T-MIU" id="q0x-sh-qxR"/>
                 <outlet property="resendLabel" destination="1BO-2X-L5e" id="g1D-hx-6Co"/>
                 <outlet property="topOTPViewLC" destination="CUv-V8-4xB" id="LUq-2q-Asd"/>
                 <outlet property="topResendLabelLC" destination="qFW-f1-623" id="uAv-F0-I65"/>
-                <outlet property="verificationPhoneNumberButton" destination="Oty-Ne-fFm" id="0gL-Do-rvC"/>
+                <outlet property="verificationPhoneNumberButton" destination="Oty-Ne-fFm" id="rNy-5R-F4O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +40,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
-                        <action selector="actionLoginSMSPhone:" destination="-1" eventType="touchUpInside" id="6mZ-c8-08m"/>
+                        <action selector="actionLoginOTPPhone:" destination="-1" eventType="touchUpInside" id="k4E-c0-x5I"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-2X-L5e">
@@ -49,9 +49,6 @@
                     <color key="textColor" name="color_006DFF"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3NY-kT-z3C">
-                    <rect key="frame" x="502" y="675" width="20" height="20"/>
-                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,9 +63,7 @@
                 <constraint firstItem="X7y-9T-MIU" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="340/375" id="TgQ-ug-vDU"/>
                 <constraint firstItem="X7y-9T-MIU" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.07" id="cLY-sx-2Lc"/>
                 <constraint firstItem="Hrb-6O-6N9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="chh-3N-aAn"/>
-                <constraint firstItem="3NY-kT-z3C" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="e7M-Nz-V0e"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hrb-6O-6N9" secondAttribute="trailing" id="fjs-Eb-wnn"/>
-                <constraint firstItem="3NY-kT-z3C" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="mcO-Td-6eb"/>
                 <constraint firstItem="Hrb-6O-6N9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n65-fZ-Wm1"/>
                 <constraint firstAttribute="bottom" secondItem="Oty-Ne-fFm" secondAttribute="bottom" constant="20" id="nTP-sP-gEq"/>
                 <constraint firstItem="1BO-2X-L5e" firstAttribute="top" secondItem="X7y-9T-MIU" secondAttribute="bottom" constant="22" id="qFW-f1-623"/>

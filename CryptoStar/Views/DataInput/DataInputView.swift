@@ -16,17 +16,17 @@ class DataInputView: BaseNibView {
         createLayerLineTextField()
     }
 
-    func setUpTextLabel(text: TitleLabel) {
+    func setupTextLabel(text: TitleLabel) {
         titleLabel.text = text.rawValue
         titleLabel.font = .sfProDisplay(font: .regular, size: 10)
         titleLabel.textColor = UIColor.hexStringUIColor(color: .titleColorLabel)
     }
 
-    func setUpTextField(keyboardType: UIKeyboardType, secureTextEntry: Bool = false) {
+    func setupTextField(keyboardType: UIKeyboardType, secureTextEntry: Bool = false) {
         dataInputTextField.keyboardType = keyboardType
         dataInputTextField.isSecureTextEntry = secureTextEntry
         dataInputTextField.font = .sfProDisplay(font: .regular, size: 18)
-        if secureTextEntry == true {
+        if secureTextEntry {
             dataInputTextField.textContentType = .oneTimeCode
         }
     }

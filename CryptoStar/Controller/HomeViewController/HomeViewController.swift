@@ -5,78 +5,78 @@
 //  Created by Nguyen Ty on 24/05/2022.
 //
 
+import Network
 import UIKit
+let kScreen = UIScreen.main.bounds
 
 class HomeViewController: BaseViewController {
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var navigationBarView: TitleTabBarView!
     @IBOutlet private var coinPriceTableView: UITableView!
+    var refresh = ATRefreshControl(frame: CGRect(x: 0, y: -50.scaleW,
+                                                 width: kScreen.width,
+                                                 height: 50.scaleW))
+    lazy var refreshLoadMore: ATRefreshControl = {
+        let refresh = ATRefreshControl(frame: CGRect(x: 0, y: kScreen.height - 20.scaleW,
+                                                     width: kScreen.width,
+                                                     height: 50.scaleW))
+        refresh.backgroundColor = UIColor.clear
+        return refresh
+    }()
 
     @IBOutlet private var bottomCoinPriceTableViewLC: NSLayoutConstraint!
     private let limit = 10
     private var start = 1
     private var isLoading = false
-    private var endLoadMore = false
-    private var isLoadLogo = false
     private let downloader = ImageDownloader()
     private var coins: [Coin] = []
-    private var errorMessage = ""
     private let imageCache = ImageCache.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupActivityIndicatorView()
-        setupRefreshControlTableView()
+
         getDataAPI()
         setupTableView()
+        setupRefreshControlTableView()
         setupNavigationBarView()
+        navigationBarView.navigationBarSelectIndex(type: .home)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+        navigationBarView.setupCornerRadius()
         navigationBarView.setupLayoutView()
-        bottomCoinPriceTableViewLC.constant = 80.scaleW
     }
 
     func setupRefreshControlTableView() {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(reloadTableView), for: .valueChanged)
-        coinPriceTableView.refreshControl = refreshControl
+        if !isLoading {
+            refresh.addTarget(self, action: #selector(actionReloadDataTableView), for: .valueChanged)
+        }
     }
 
-    @objc func reloadTableView() {
+    @objc func actionReloadDataTableView() {
         isLoading = false
         start = 1
-        coins.removeAll()
         ImageCache.shared.removeAll()
         getDataAPI()
         coinPriceTableView.reloadData()
         coinPriceTableView.refreshControl?.endRefreshing()
     }
 
-    func setupActivityIndicatorView() {
-        activityIndicator.center = view.center
-        activityIndicator.frame.size.height = 100
-        activityIndicator.frame.size.width = 100
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
-        activityIndicator.color = UIColor.red
-        view.addSubview(activityIndicator)
-    }
-
     func setupNavigationBarView() {
         navigationBarView.navigationBarSelectIndex(type: .home)
-        navigationBarView.setupTilteLabel(type: .home)
+        navigationBarView.setupTitleLabel(type: .home)
     }
 
     func getDataAPI() {
+        print("Get API")
         if !isLoading {
             isLoading = true
             start = coins.isEmpty ? 1 : coins.count + 1
-
             API.request(dataAPI: APICoin.getCoin(start: start, limit: limit)) { (result: ClosureResultCoin<CoinResponse>) in
                 switch result {
                 case let .success(response):
+                    self.refreshLoadMore.hideLoadMore(self.coinPriceTableView)
                     if let errorMessage = response.status.errorMessage {
                         self.showAlert(title: .errorMessage, message: errorMessage)
                     } else {
@@ -96,7 +96,7 @@ class HomeViewController: BaseViewController {
                     self.showAlert(title: .errorTextField, message: error.localizedDescription)
                 case let .disconnected(data):
                     self.showAlert(title: .errorMessage, message: data)
-                    self.setTimerDelayAPI(timer: 3)
+                    self.setTimerDelayAPI(timer: 10)
                 }
             }
         }
@@ -126,18 +126,20 @@ class HomeViewController: BaseViewController {
     }
 
     func setTimerLoadMore(timer: Double) {
-        Timer.scheduledTimer(withTimeInterval: timer, repeats: false) { _ in
-            self.activityIndicator.hidesWhenStopped = true
-            self.activityIndicator.stopAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + timer) {
             self.start = self.coins.count + 1
             self.getDataAPI()
         }
     }
 
     func setupTableView() {
+        bottomCoinPriceTableViewLC.constant = 80.scaleW
         coinPriceTableView.dataSource = self
         coinPriceTableView.delegate = self
+        coinPriceTableView.addSubview(refresh)
+        coinPriceTableView.addSubview(refreshLoadMore)
         coinPriceTableView.separatorStyle = .none
+
         coinPriceTableView.register(aClass: CoinPriceCell.self)
     }
 
@@ -151,6 +153,18 @@ class HomeViewController: BaseViewController {
         ]
 
         NSLayoutConstraint.activate(constaints)
+    }
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        refresh.containingScrollViewDidEndDragging(scrollView)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("Scroll View Y:\(scrollView.contentOffset.y)")
+        refresh.didScroll(scrollView)
+        refreshLoadMore.didScrollDown(scrollView)
     }
 }
 
@@ -177,10 +191,9 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if coins.count - 1 == indexPath.row {
-            activityIndicator.hidesWhenStopped = false
-            activityIndicator.startAnimating()
             if isLoading == false {
-                setTimerLoadMore(timer: 2)
+                refreshLoadMore.showLoadMore(tableView)
+                setTimerLoadMore(timer: 3)
             }
         }
     }

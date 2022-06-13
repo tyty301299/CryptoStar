@@ -27,7 +27,7 @@ class CreateAccountViewController: BaseViewController {
                                title: .createAccount,
                                notificationTitle: .notificationTitleCreateAccount)
         setupViews()
-        notificationCenterKeyBoard()
+        registerNotificationCenterKeyBoard()
         setupActivityIndicatorView()
     }
 
@@ -48,7 +48,7 @@ class CreateAccountViewController: BaseViewController {
         view.addSubview(activityIndicator)
     }
 
-    func notificationCenterKeyBoard() {
+    func registerNotificationCenterKeyBoard() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
@@ -67,12 +67,12 @@ class CreateAccountViewController: BaseViewController {
     }
 
     func setupViews() {
-        emailView.setUpTextLabel(text: .emailID)
-        emailView.setUpTextField(keyboardType: .emailAddress)
-        yourNameView.setUpTextLabel(text: .yourName)
-        yourNameView.setUpTextField(keyboardType: .default)
-        passwordView.setUpTextLabel(text: .password)
-        confirmPasswordView.setUpTextLabel(text: .confirmPassWord)
+        emailView.setupTextLabel(text: .emailID)
+        emailView.setupTextField(keyboardType: .emailAddress)
+        yourNameView.setupTextLabel(text: .yourName)
+        yourNameView.setupTextField(keyboardType: .default)
+        passwordView.setupTextLabel(text: .password)
+        confirmPasswordView.setupTextLabel(text: .confirmPassWord)
         yourNameView.dataInputTextField.delegate = self
         emailView.dataInputTextField.delegate = self
         passwordView.dataInputTextField.delegate = self
@@ -81,10 +81,10 @@ class CreateAccountViewController: BaseViewController {
                                         background: .black,
                                         textColor: .white)
 
-        passwordView.setUpTextField(keyboardType: .default,
+        passwordView.setupTextField(keyboardType: .default,
                                     secureTextEntry: true)
 
-        confirmPasswordView.setUpTextField(keyboardType: .default,
+        confirmPasswordView.setupTextField(keyboardType: .default,
                                            secureTextEntry: true)
     }
 
@@ -111,7 +111,7 @@ class CreateAccountViewController: BaseViewController {
         }
     }
 
-    @IBAction func createAccountEmail(_ sender: Any) {
+    @IBAction func createAccount(_ sender: Any) {
         // TODO: Validate email, password >= 8 characters
         guard let name = yourNameView.dataInputTextField.text, !name.isEmpty,
               let email = emailView.dataInputTextField.text, !email.isEmpty,
@@ -125,7 +125,7 @@ class CreateAccountViewController: BaseViewController {
         if email.isNotContainsEmail {
             showAlert(title: .email, message: DataTextField.emailIsNot.getTitle())
         } else if password == confirmPassword {
-            AuthManager.shared.signInEmailLink(email: email, password: password) { [weak self] result in
+            AuthManager.shared.signUpEmailLink(email: email, password: password) { [weak self] result in
                 switch result {
                 case .success:
                     UIView.animate(withDuration: 1) {
@@ -150,12 +150,15 @@ extension CreateAccountViewController: UITextFieldDelegate {
         }
         let subStringToReplace = textFieldText[rangeOfTextToReplace]
         let count = textFieldText.count - subStringToReplace.count + string.count
-
-        if textField == emailView.dataInputTextField &&
+        print("Text Field Account : \(textField)")
+        if textField == emailView.dataInputTextField ||
             textField == yourNameView.dataInputTextField {
             return count <= Limit.email
         }
+        else {
+            return count <= Limit.password
+        }
 
-        return count <= Limit.password
+        
     }
 }

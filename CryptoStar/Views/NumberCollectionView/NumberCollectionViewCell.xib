@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,17 +20,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykM-if-eZV">
                         <rect key="frame" x="0.0" y="0.0" width="90" height="78"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-dA-ZmO">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-dA-ZmO">
                                 <rect key="frame" x="0.0" y="0.0" width="90" height="78"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7bA-dA-ZmO" secondAttribute="trailing" id="1E5-8v-nVB"/>
+                            <constraint firstItem="7bA-dA-ZmO" firstAttribute="top" secondItem="ykM-if-eZV" secondAttribute="top" id="5f1-8Q-T71"/>
                             <constraint firstItem="7bA-dA-ZmO" firstAttribute="width" secondItem="ykM-if-eZV" secondAttribute="width" id="BbF-RV-CST"/>
-                            <constraint firstItem="7bA-dA-ZmO" firstAttribute="centerX" secondItem="ykM-if-eZV" secondAttribute="centerX" id="bJ3-Jm-7dN"/>
-                            <constraint firstItem="7bA-dA-ZmO" firstAttribute="centerY" secondItem="ykM-if-eZV" secondAttribute="centerY" id="gZA-gK-PeH"/>
+                            <constraint firstItem="7bA-dA-ZmO" firstAttribute="leading" secondItem="ykM-if-eZV" secondAttribute="leading" id="LkA-cZ-OXa"/>
+                            <constraint firstAttribute="bottom" secondItem="7bA-dA-ZmO" secondAttribute="bottom" id="loQ-ZS-VGB"/>
                             <constraint firstItem="7bA-dA-ZmO" firstAttribute="height" secondItem="ykM-if-eZV" secondAttribute="height" id="m2u-Pj-7rj"/>
                         </constraints>
                     </view>

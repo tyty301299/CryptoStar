@@ -8,11 +8,11 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         print("[HOT] \(className) init")
     }
-
     deinit {
         print("[HOT] \(self.className) deinit")
     }
@@ -20,9 +20,8 @@ class BaseViewController: UIViewController {
     func setupNavigationBarView(navigationBarView: CustomNavigationBarView,
                                 title: TitleNavigationBar,
                                 notificationTitle: TitleNavigationBar = .isEmptyData) {
-
         navigationBarView.setupNavigationBarButton()
-        navigationBarView.setupStyleNavigaitonBarLabel()
+        navigationBarView.setupStyleNavigationBarLabel()
         navigationBarView.titleLabel.setTitle(title)
         navigationBarView.notificationLabel.isHidden = false
         navigationBarView.notificationLabel.setTitle(notificationTitle)
@@ -40,4 +39,5 @@ class BaseViewController: UIViewController {
         view.endEditing(true)
     }
 }
+
 

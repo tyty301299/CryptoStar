@@ -12,16 +12,13 @@ class VerifyPhoneNumberViewController: BaseViewController {
     @IBOutlet private var verificationPhoneNumberButton: UIButton!
     @IBOutlet private var otpView: OTPView!
     @IBOutlet private var navigationBarView: CustomNavigationBarView!
-
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var bottomVerificaionPhoneButtonLC: NSLayoutConstraint!
     @IBOutlet private var topResendLabelLC: NSLayoutConstraint!
     @IBOutlet private var topOTPViewLC: NSLayoutConstraint!
-
     var numberphone = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupActivityIndicatorView()
+        setupLayoutViews()
         addGestureRecognizerResendLabel()
         setupNavigationBarView(navigationBarView: navigationBarView,
                                title: .verifyPhone)
@@ -33,16 +30,6 @@ class VerifyPhoneNumberViewController: BaseViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupLayoutViews()
-    }
-    
-    func setupActivityIndicatorView(){
-        activityIndicator.center = self.view.center
-        activityIndicator.frame.size.height = 100
-        activityIndicator.frame.size.width = 100
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = .large
-        activityIndicator.color = UIColor.red
     }
 
     func setupLayoutViews() {
@@ -53,12 +40,12 @@ class VerifyPhoneNumberViewController: BaseViewController {
 
     func addGestureRecognizerResendLabel() {
         let tapResendLabel = UITapGestureRecognizer(target: self,
-                                                    action: #selector(actionResend(_:)))
+                                                    action: #selector(actionResendOTP(_:)))
         resendLabel.addGestureRecognizer(tapResendLabel)
         resendLabel.isUserInteractionEnabled = true
     }
 
-    @objc func actionResend(_ gesture: UITapGestureRecognizer) {
+    @objc func actionResendOTP(_ gesture: UITapGestureRecognizer) {
         guard numberphone.isNotEmpty else { return }
         AuthManager.shared.startAuth(phoneNumber: numberphone) { [weak self] result in
             switch result {
@@ -70,22 +57,20 @@ class VerifyPhoneNumberViewController: BaseViewController {
         }
     }
 
-    @IBAction func actionLoginSMSPhone(_ sender: Any) {
-        let sms = otpView.numTextField
-        //TODO: [weak self]
-        AuthManager.shared.verifyCode(smsCode: sms) { [weak self] result in
+    @IBAction func actionLoginOTPPhone(_ sender: Any) {
+        let otp = otpView.numTextField
+        // TODO: [weak self]
+        AuthManager.shared.verifyCode(smsCode: otp) { [weak self] result in
+            guard let self = self else {
+                return
+            }
             switch result {
             case .success:
-                self?.activityIndicator.hidesWhenStopped = false
-                self?.activityIndicator.startAnimating()
-                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
-                    self?.activityIndicator.hidesWhenStopped = true
-                    self?.activityIndicator.stopAnimating()
-                     self?.appDelegate.setTabBarViewController()
+                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+                    self.appDelegate.setTabBarViewController()
                 }
-                
             case let .failure(error):
-                self?.showAlert(title: .errorTextField, message: error.localizedDescription)
+                self.showAlert(title: .errorTextField, message: error.localizedDescription)
             }
         }
     }
